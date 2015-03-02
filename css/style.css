@@ -135,7 +135,7 @@ body {
     display: table;
     background: rgb(255, 255, 255); /* Si el navegador no soporta transparencia se mostrará 100% opaco */
     background: rgba(255, 255, 255, 0.4);
-    color: #333;
+    color: darkslategray;
     font-size: 14px;
 }
 
@@ -169,8 +169,29 @@ body {
     padding: 10px;
 }
 
+/* FOOTER */
+
 footer {
     margin: 20px 20px;
     padding: 10px;
     clear: both;
+}
+
+footer > ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+footer > ul > li {
+    margin: 5px;
+    font-size: 14px;
+    color: darkslategray;
+}
+
+footer > ul > li a {
+    color: darkslategray;
+}
+
+footer > ul i {
+    margin-right: 10px;
 }
