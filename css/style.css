@@ -36,8 +36,8 @@ body {
     list-style: none outside none;
     margin: 0px;
     padding: 0px;
-    background-color: ghostwhite;
-    border-bottom: 5px solid darkslategray;
+    background-color: #F8F8FF; /* ghostwhite */
+    border-bottom: 5px solid #0F2F2F; /* darkslategray darker*/
     float: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -69,7 +69,7 @@ body {
 }
 
 #menu > ul > li > a {
-    color: darkslategray;
+    color: #0F2F2F; /* darkslategray darker*/
     display: block;
     font-size: 20px;
     line-height: 49px;
@@ -78,21 +78,21 @@ body {
 }
 
 #menu > ul > a:hover, #menu > ul > li:hover > a {
-    background-color: crimson;
-    color: white;
+    background-color: #B22222; /* firered */
+    color: #F8F8FF; /* ghostwhite */
 }
 
 #menu > ul li.active > a {
-    background-color: darkslategray;
-    color: white;
+    background-color: #0F2F2F; /* darkslategray darker*/
+    color: #F8F8FF; /* ghostwhite */
 }
 
 /* Submenu */
 
 #menu > ul ul.sub {
-    background-color: white;
+    background-color: #F8F8FF; /* ghostwhite */
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    color: darkslategray;
+    color: #0F2F2F; /* darkslategray darker*/
     display: none;
     left: 0;
     padding: 1%;
@@ -110,13 +110,13 @@ body {
     vertical-align: top;
 }
 #menu > ul ul.sub > li a {
-    color: dimgrey;
+    color: #0F2F2F; /* darkslategray darker*/
     line-height: 20px;
     padding-left: 10px;
     padding-right: 10px;
 }
 #menu > ul ul li a:hover {
-    color: crimson;
+    color: #B22222; /* firered */
 }
 #menu > ul ul.sub > li > a {
     font-size: 14px;
@@ -135,7 +135,7 @@ body {
     display: table;
     background: rgb(255, 255, 255); /* Si el navegador no soporta transparencia se mostrará 100% opaco */
     background: rgba(255, 255, 255, 0.4);
-    color: darkslategray;
+    color: #0F2F2F; /* darkslategray darker*/
     font-size: 14px;
 }
 
@@ -150,10 +150,12 @@ body {
     margin: 10px;
 }
 
-#main #content section header {
+#main header {
     font-variant: small-caps;
+    font-weight: bolder;
     font-size: 20px;
-    border-bottom: 2px groove crimson;
+    color: #8B0000; /* darkred */
+    border-bottom: 2px solid #0F2F2F; /* darkslategray darker*/
     margin-bottom: 10px;
 }
 
@@ -177,13 +179,15 @@ footer {
     margin: 20px 20px;
     padding: 10px;
     clear: both;
-    color: darkslategray;
+    color: #0F2F2F; /* darkslategray darker*/
 }
 
 footer header {
     font-variant: small-caps;
+    font-weight: bolder;
     font-size: 20px;
-    border-bottom: 2px groove crimson;
+    color: #8B0000; /* darkred */
+    border-bottom: 2px solid #0F2F2F; /* darkslategray darker*/
     margin-bottom: 10px;
 }
 
@@ -198,7 +202,7 @@ footer > ul > li {
 }
 
 footer > ul > li a {
-    color: darkslategray;
+    color: #0F2F2F; /* darkslategray darker*/
 }
 
 footer > ul i {
