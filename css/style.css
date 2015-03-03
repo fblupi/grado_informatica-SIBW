@@ -139,6 +139,8 @@ body {
     font-size: 14px;
 }
 
+/* Contenido */
+
 #main #content {
     padding-top: 10px;
     width: 75%;
@@ -163,6 +165,8 @@ body {
     text-align: justify;
 }
 
+/* Aside */
+
 #main aside {
     padding-top: 10px;
     width: 25%;
@@ -171,6 +175,13 @@ body {
 
 #main aside p {
     padding: 10px;
+}
+
+#main aside #redessociales i {
+    font-size: 32px;
+    list-style: none;
+    padding-left: 10px;
+    margin-top: -10px;
 }
 
 /* FOOTER */
