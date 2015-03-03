@@ -1,14 +1,18 @@
 @font-face {
     font-family: Pier;
-    src: url("../fonts/pier.otf");
+    src: url("/fonts/pier.otf");
 }
 
 body {
     font-family: Pier, sans-serif;
 	width: 980px;
 	margin: auto;
-    background-image: url("../images/background.png");
+    background-image: url("/images/background.png");
     background-repeat: repeat;
+}
+
+b {
+    color: #000000;
 }
 
 /* CABECERA */
@@ -137,6 +141,7 @@ body {
     background: rgba(255, 255, 255, 0.4);
     color: #333333;
     font-size: 14px;
+    width: 920px;
 }
 
 /* Contenido */
@@ -176,18 +181,68 @@ body {
 #main aside header {
     text-align: left;
     padding-left: 10px;
+    padding-top: 10px;
     font-size: 18px;
     border: none;
 }
 
-#main aside #redessociales {
+#main aside #fechas, #main aside #redes-sociales, #main aside #enlaces {
+    padding-right: 5px;
+}
+
+/* Fechas */
+
+#main aside #fechas ul {
+    list-style: circle;
+}
+
+/* Redes sociales */
+
+#main aside #redes-sociales {
     font-size: 32px;
     text-align: center;
 }
 
-#main aside a {
-    text-decoration: none;
+#main aside #redes-sociales a {
+    font-size: 32px;
+    text-align: center;
     color: #333333;
+}
+
+#redes-sociales #btn-twitter:hover{
+    color: #5EA9DD;
+}
+
+#redes-sociales #btn-facebook:hover{
+    color: #3B5998;
+}
+
+#redes-sociales #btn-google:hover{
+    color: #CD4130;
+}
+
+/* Enlaces */
+
+#main aside #enlaces ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
+
+#main aside #enlaces a {
+    padding: 5px;
+    text-decoration: none;
+    display:block;
+    color: #333333;
+}
+
+#main aside #enlaces a:hover {
+    color: #F8F8FF;
+    background: #333333;
+    background: rgba(0,0,0,0.75);
 }
 
 /* FOOTER */
@@ -216,6 +271,7 @@ footer > #contacto > ul {
 footer > #contacto > ul > li {
     margin: 5px;
     font-size: 14px;
+    color: #333333;
 }
 
 footer > #contacto > ul > li a {
