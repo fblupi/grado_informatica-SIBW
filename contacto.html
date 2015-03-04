@@ -16,7 +16,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Programa</a></li>
                 <li><a href="#">Inscripción</a></li>
-                <li><a href="#s1">Sede</a>
+                <li><a class="with-sub">Sede</a>
                     <span id="s1"></span>
                     <ul class="sub">
                         <li><a href="#">Ciudad</a></li>
@@ -24,36 +24,54 @@
                     </ul>
                 </li>
                 <li><a href="#">Patrocinadores</a></li>
-                <li class="active"><a href="#">Contacto</a></li>
+                <li class="active"><a>Contacto</a></li>
             </ul>
         </nav>
         <div id="main">
             <div id="content">
                 <section>
-                    <header>Formulario de Contacto</header>
-                    <form>
-                            Nombre:<input type="text" name="nombre"> <br> 
-                            Correo: <input type="email" name="correo"> <br>
-                            Asunto: <input type="text" name="asunto"> <br>
-                        </form>
+                    <h1>Formulario de Contacto</h1>
+                    <form class="contact_form" action="" method="post" name="contact_form">
+                        <ul>
+                            <li>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" placeholder="Alan Turing" required/>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" placeholder="turing@gmail.com" required/>
+                            </li>
+                            <li>
+                                <label for="subject">Asunto:</label>
+                                <input type="text" name="subject" placeholder="Consulta"/>
+                            </li>
+                            <li>
+                                <label for="message">Mensaje:</label>
+                                <textarea name="message" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
+                            </li>
+                            <li>
+                                <button class="submit" type="submit">Enviar</button>
+                            </li>
+                        </ul>
+                    </form>
                 </section>
             </div> <!-- end content -->
             <aside>
                 <div id="fechas">
-                    <header>Fechas importantes</header>
+                    <h1>Fechas importantes</h1>
                     <ul>
                         <li><b>Fin de Inscripción:</b> 15 de Mayo</li> 
                         <li><b>Inicio del Congreso:</b> 1 de Junio</li>
                     </ul>
                 </div>
                 <div id="redes-sociales">
-                    <header>Redes Sociales</header>
+                    <h1>Redes Sociales</h1>
                     <a id="btn-twitter" href="#"><i class="fa fa-twitter-square"></i></a>
                     <a id="btn-facebook" href="#"><i class="fa fa-facebook-square"></i></a>
                     <a id="btn-google" href="#"><i class="fa fa-google-plus-square"></i></a>
                 </div>
                 <div id="enlaces">
-                    <header>Enlaces Rápidos</header>
+                    <h1>Enlaces Rápidos</h1>
                     <ul>
                         <li><a href="http://www.ugr.es/">Universidad de Granada</a></li>
                         <li><a href="http://etsiit.ugr.es/">Escuela Técnica Superior de Ingnierías Informática y Telecomunicación</a></li>
@@ -63,7 +81,7 @@
         </div> <!-- end main -->
         <footer id="pie">
             <div id="contacto">
-                <header>Contacto</header>
+                <h1>Contacto</h1>
                 <ul>
                     <li><i class="fa fa-home"></i>C/ Falsa, 123</li>
                     <li><i class="fa fa-phone"></i>(+34) 000 00 00 00</li>
