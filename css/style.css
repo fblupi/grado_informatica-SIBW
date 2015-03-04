@@ -175,6 +175,14 @@ b {
     margin-bottom: 10px;
 }
 
+#main h2 {
+    font-variant: small-caps;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #B92326;
+    margin-bottom: 10px;
+}
+
 #main #content section {
     margin: 10px;
 }
@@ -324,21 +332,9 @@ footer > #copyright {
     padding: 0px;
 }
 
-.contact_form li{
+.contact_form li {
     padding: 12px;
-    border-bottom: 1px solid #CCCCCC;
     position: relative;
-}
-
-.contact_form h1 {
-    margin: 0px;
-}
-
-.required_notification {
-    font-size: 12px;
-    color: #D45452;
-    display: inline;
-    padding-left: 50px;
 }
 
 .contact_form label {
@@ -366,7 +362,7 @@ footer > #copyright {
     margin-left: 156px;
 }
 
-.contact_form input, contact_form textarea {
+.contact_form input, .contact_form textarea {
     border: 1px solid #AAAAAA;
     box-shadow: 0px 0px 3px #CCCCCC, 0px 10px 15px #EEEEEE inset;
     border-radius: 2px;
