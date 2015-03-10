@@ -1,13 +1,13 @@
 @font-face {
     font-family: Pier;
-    src: url("/fonts/pier.otf");
+    src: url("../fonts/pier.otf");
 }
 
 body {
     font-family: Pier, sans-serif;
 	width: 980px;
 	margin: auto;
-    background-image: url("/images/background.png");
+    background-image: url("../images/background.png");
     background-repeat: repeat;
 }
 
@@ -147,7 +147,7 @@ b {
     margin-left: 29px;
     margin-bottom: 20px;
     border: solid 1px #ddd;
-    display: table;
+    display: table;    
     background: rgb(255, 255, 255); /* Si no soporta transparencia, opaco */
     background: rgba(255, 255, 255, 0.4);
     color: #333333;
@@ -219,6 +219,12 @@ b {
 
 #main aside #fechas, #main aside #redes-sociales, #main aside #enlaces {
     padding-right: 5px;
+}
+
+/*Patrocinadores **********************************************************/
+.patrocinador {
+    padding: 150px;
+    margin: 100px;
 }
 
 /* Fechas *****************************************************************/
