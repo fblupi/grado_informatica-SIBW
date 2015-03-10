@@ -30,7 +30,34 @@
         <div id="main">
             <div id="content">
                 <section>
-                    
+                    <form class="contact_form" action="" method="post" name="contact_form">
+                        <h1>Formulario de Inscripción</h1>
+                        <ul>
+                            <li>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" placeholder="Alan Turing" required/>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" placeholder="turing@gmail.com" required/>
+                            </li>
+                            <li>
+                                <label for="subject">Teléfono:</label>
+                                <input type="text" name="phone" placeholder="612345678"/>
+                            </li>
+                            <li>
+                                <label for="type">Opción: </label>
+                                <select name="type" required>
+                                    <option value="profesional">Profesional</option>
+                                    <option value="profesor">Profesor</option>
+                                    <option value="alumno">Alumno</option>
+                                </select>
+                            </li>
+                            <li>
+                                <button class="submit" type="submit">Enviar</button>
+                            </li>
+                        </ul>
+                    </form>
                 </section>
             </div> <!-- end content -->
             <aside>
