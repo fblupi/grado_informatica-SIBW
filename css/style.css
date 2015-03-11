@@ -191,12 +191,32 @@ b {
     text-align: justify;
 }
 
-/* Image-slider */
+/* Patrocinadores *********************************************************/
+
+.patrocinador {   
+    margin: 5px;
+    width: 150px;
+    border: solid 1px #BBB;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+/* Image-slider ***********************************************************/
 
 #main #content .image-slider img {
     width: 670px;
     height: 250px;
     padding-bottom: 10px; 
+}
+
+/* Foto izda, texto dcha ***************************************************/
+.seccion-como-llegar {
+    min-height: 150px;
+}
+
+.seccion-como-llegar img {
+    float: left;
+    width: 150px;
+    padding-right: 10px;
 }
 
 /**************************************************************************/
@@ -219,15 +239,6 @@ b {
 
 #main aside #fechas, #main aside #redes-sociales, #main aside #enlaces {
     padding-right: 5px;
-}
-
-/* Patrocinadores *********************************************************/
-
-.patrocinador {   
-    margin: 5px;
-    width: 150px;
-    border: solid 1px #BBB;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
 /* Fechas *****************************************************************/
