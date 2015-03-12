@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>CEIIE 2015</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="programa.html">Programa</a></li>
-                <li class="active"><a>Inscripción</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
                 <li><a class="with-sub">Sede</a>
                     <span id="s1"></span>
                     <ul class="sub">
@@ -24,14 +24,14 @@
                     </ul>
                 </li>
                 <li><a href="patrocinadores.html">Patrocinadores</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li class="active"><a>Contacto</a></li>
             </ul>
         </nav>
         <div id="main">
             <div id="content">
                 <section>
                     <form class="contact_form" action="" method="post" name="contact_form" novalidate>
-                        <h1>Formulario de Inscripción</h1>
+                        <h1>Formulario de Contacto</h1>
                         <ul>
                             <li>
                                 <label for="name">Nombre:</label>
@@ -42,16 +42,12 @@
                                 <input type="email" name="email" placeholder="turing@gmail.com" required/>
                             </li>
                             <li>
-                                <label for="subject">Teléfono:</label>
-                                <input type="text" name="phone" placeholder="612345678"/>
+                                <label for="subject">Asunto:</label>
+                                <input type="text" name="subject" placeholder="Consulta"/>
                             </li>
                             <li>
-                                <label for="type">Opción: </label>
-                                <select name="type" required>
-                                    <option value="profesional">Profesional</option>
-                                    <option value="profesor">Profesor</option>
-                                    <option value="alumno">Alumno</option>
-                                </select>
+                                <label for="message">Mensaje:</label>
+                                <textarea name="message" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
                             </li>
                             <li>
                                 <button class="submit" type="submit">Enviar</button>
@@ -93,7 +89,7 @@
                 </ul>
             </div>
             <div id="copyright">
-                Sitio creador por fblupi y mglmx
+                <p>Copyright ©. Todos los derechos reservados. Sitio creador por fblupi y mglmx.</p>
             </div>
         </footer>
     </body>

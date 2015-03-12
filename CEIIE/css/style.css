@@ -191,6 +191,27 @@ b {
     text-align: justify;
 }
 
+#main #content section article a {
+    text-decoration: none;
+    color: #B92326;
+}
+
+#main #content section article a:visited {
+    color: #A52A2A;
+}
+
+#main #content section article a:active {
+    color: #FF0000;
+}
+
+.direcciones {
+    list-style-type: none;   
+}
+
+.direcciones i {
+    padding-right: 12px;
+}
+
 /* Patrocinadores *********************************************************/
 
 .patrocinador {   
@@ -208,15 +229,12 @@ b {
     padding-bottom: 10px; 
 }
 
-/* Foto izda, texto dcha ***************************************************/
-.seccion-como-llegar {
-    min-height: 150px;
-}
+/* Mapa (ancho completo) **************************************************/
 
-.seccion-como-llegar img {
-    float: left;
-    width: 150px;
-    padding-right: 10px;
+.map-max-width {
+    width: 670px;
+    height: 450px;
+    border: 0;
 }
 
 /**************************************************************************/

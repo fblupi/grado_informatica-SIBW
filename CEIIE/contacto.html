@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>CEIIE 2015</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
@@ -16,42 +16,44 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="programa.html">Programa</a></li>
                 <li><a href="inscripcion.html">Inscripción</a></li>
-                <li class="active"><a class="with-sub">Sede</a>
+                <li><a class="with-sub">Sede</a>
                     <span id="s1"></span>
                     <ul class="sub">
                         <li><a href="ciudad.html">Ciudad</a></li>
-                        <li><a href="#">¿Cómo llegar?</a></li>
+                        <li><a href="como-llegar.html">¿Cómo llegar?</a></li>
                     </ul>
                 </li>
                 <li><a href="patrocinadores.html">Patrocinadores</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li class="active"><a>Contacto</a></li>
             </ul>
         </nav>
         <div id="main">
             <div id="content">
                 <section>
-                    <article>
-                        <h1> Cómo llegar al congreso</h1>
-                        <p>La sede del congreso estará en la Escuela Técnica Superior de Ingenierías Informática y Telecomunicación de Granada (ETSIIT).</p>
-                        <div class="image-slider">
-                            <img alt="etsiit1" src="images/como-llegar/coche.jpg"/>
-                        </div>
-                        <h2><i class="fa fa-car"></i> En coche</h2>
-                        <p class="text-right">Desde la A-44 tomar la salida 125. En la rotonda coger la salida de la Avenida de la Constitución y, más adelante, girar a la izquierda hacia la Calle Periodista Eugenio Selles. Al final de esta calle se encuentra la sede.</p>
-
-                        <h2><i class="fa fa-bus"></i> Desde la estación de autobuses</h2>
-                        <p> El congreso se encuentra a tan solo 10 o 15 minutos ndando desde la estación de autobuses.</p>
-                        <p>Para llegar solo hay que bajar la Calle Ovidio y en la rotonda ir por la salida Avenida Compositor Luis de Narváez. Tras bajar esa calle se encuentra la sede.</p>
-
-                        <h2><i class="fa fa-plane"></i> Desde el aeropuerto</h2>
-                        <p>Para llegar al congreso es necesario coger el autobús que parte desde el aeropuerto cada hora a partir de las 6:00 hasta las 19:00. El autobús tiene su parada en Granada en la Caleta donde se podrá hacer trasbordo y coger las líneas N3 o SN3.</p>
-                        <p>La línea N3 tiene una parada en la Avenida Compositor Luis de Narváez. Al final de esta calle se encuentra la sede. </p>
-                        <p>La línea SN3 nos permite bajar junto a la Calle Periodista Eugenio Selles. Solo hay que subir esta calle hasta llegar a la sede.</p>
-
-                        <h2><i class="fa fa-train"></i> Desde la estación de tren</h2>
-                        <p>Tras salir de la estación de tren hay que subir la Avenida de Andaluces hasta a la Avenida de la Constitución. Allí podemos coger la linea N3.</p>
-                        <p>La línea N3 tiene una parada en la Avenida Compositor Luis de Narváez. Al final de esta calle se encuentra la sede.</p>
-                    </article>
+                    <form class="contact_form" action="" method="post" name="contact_form" novalidate>
+                        <h1>Formulario de Contacto</h1>
+                        <ul>
+                            <li>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" placeholder="Alan Turing" required/>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" placeholder="turing@gmail.com" required/>
+                            </li>
+                            <li>
+                                <label for="subject">Asunto:</label>
+                                <input type="text" name="subject" placeholder="Consulta"/>
+                            </li>
+                            <li>
+                                <label for="message">Mensaje:</label>
+                                <textarea name="message" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
+                            </li>
+                            <li>
+                                <button class="submit" type="submit">Enviar</button>
+                            </li>
+                        </ul>
+                    </form>
                 </section>
             </div> <!-- end content -->
             <aside>
@@ -87,7 +89,7 @@
                 </ul>
             </div>
             <div id="copyright">
-                Sitio creador por fblupi y mglmx
+                <p>Copyright ©. Todos los derechos reservados. Sitio creador por fblupi y mglmx.</p>
             </div>
         </footer>
     </body>
