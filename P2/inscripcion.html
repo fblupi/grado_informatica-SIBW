@@ -13,9 +13,9 @@
         </header>
         <nav id="menu">
             <ul>
-                <li class="active"><a>Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="programa.html">Programa</a></li>
-                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li class="active"><a>Inscripción</a></li>
                 <li><a class="with-sub">Sede</a>
                     <span id="s1"></span>
                     <ul class="sub">
@@ -30,17 +30,34 @@
         <div id="main">
             <div id="content">
                 <section>
-                    <div class="image-slider">
-                        <img alt="etsiit1" src="images/etsiit/etsiit1.jpg"/>
-                    </div>
-                    <article> 
-                        <h1>I Congreso de Estudiantes de Ingeniería Informática de España</h1>
-                        <p>El primer Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) es un evento dirigido a alumnos y profesores de ingeniería informática de todas las universidades del país. </p>
-                        <p>Se realizarán actividades y conferencias que cubren todos los campos relacionados con la informática, y dentro de cada uno de ellos se presentan, por medio de comunicaciones, los aspectos más innovadores, y con mayor proyección futura, siempre desde una perspectiva eminentemente universitaria y científica.</p>
-                        <p>Uno de los objetivos es fomentar las relaciones e intercambios entre las distintas universidades de España en un campo en continua expansión como es el de la informática.</p>
-                        <h2>La Escuela</h2>
-                        <p>El congreso lo organizará la Escuela Tecnica Superior de Ingenierías Informatica y Telecomunicación (ETSIIT) de Granada.</p>
-                    </article>
+                    <form class="contact_form" action="" method="post" name="contact_form" novalidate>
+                        <h1>Formulario de Inscripción</h1>
+                        <ul>
+                            <li>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" placeholder="Alan Turing" required/>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" placeholder="turing@gmail.com" required/>
+                            </li>
+                            <li>
+                                <label for="subject">Teléfono:</label>
+                                <input type="text" name="phone" placeholder="612345678"/>
+                            </li>
+                            <li>
+                                <label for="type">Opción: </label>
+                                <select name="type" required>
+                                    <option value="profesional">Profesional</option>
+                                    <option value="profesor">Profesor</option>
+                                    <option value="alumno">Alumno</option>
+                                </select>
+                            </li>
+                            <li>
+                                <button class="submit" type="submit">Enviar</button>
+                            </li>
+                        </ul>
+                    </form>
                 </section>
             </div> <!-- end content -->
             <aside>
@@ -64,7 +81,6 @@
                         <li><a href="http://etsiit.ugr.es/">Escuela Técnica Superior de Ingnierías Informática y Telecomunicación</a></li>
                     </ul>
                 </div>
-                
             </aside>
         </div> <!-- end main -->
         <footer id="pie">
