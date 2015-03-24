@@ -30,12 +30,12 @@
         <div id="main">
             <div id="content">
                 <section>
-                    <form  id="formContacto" class="contact_form" action="" method="post" name="contact_form" novalidate>
+                    <form  id="formContacto" class="contact_form" action="" method="post" name="contact_form" onsubmit="return validar('contact_form');" novalidate>
                         <h1>Formulario de Contacto</h1>
                         <ul>
                             <li>
                                 <label for="name">Nombre:</label>
-                                <input type="text" name="name" placeholder="Alan Turing" required/>
+                                <input type="text" name="nombre" placeholder="Alan Turing" required/>
                             </li>
                             <li>
                                 <label for="email">Email:</label>
@@ -43,14 +43,14 @@
                             </li>
                             <li>
                                 <label for="subject">Asunto:</label>
-                                <input type="text" name="subject" placeholder="Consulta"/>
+                                <input type="text" name="asunto" placeholder="Consulta"/>
                             </li>
                             <li>
                                 <label for="message">Mensaje:</label>
-                                <textarea name="message" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
+                                <textarea type="textarea" name="mensaje" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
                             </li>
                             <li>
-                                <button class="submit" type="submit" onclick="validar();">Enviar</button>
+                                <button class="submit"  >Enviar</button>
                             </li>
                         </ul>
                     </form>
@@ -76,6 +76,13 @@
                         <li><a href="http://www.ugr.es/">Universidad de Granada</a></li>
                         <li><a href="http://etsiit.ugr.es/">Escuela Técnica Superior de Ingnierías Informática y Telecomunicación</a></li>
                     </ul>
+                </div>
+                <div id="patrocinadores">
+                    <h1>Patrocinadores</h1>                       
+                    <img class="patrocinador" id="imagen-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                    <script type="text/javascript">
+                        setInterval("sliderAsidePatro()",3000);
+                    </script>
                 </div>
             </aside>
         </div> <!-- end main -->

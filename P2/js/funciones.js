@@ -42,22 +42,40 @@ function isEmpty(campo){
     }
 }
 
-function validar(){
-    var formulario = document.forms['contact_form'];
+function validar(nombreFormulario){
+    var formulario = document.forms[nombreFormulario];
+    var validado= true;
     
     for(var i=0; i<formulario.elements.length; i++){
         var elemento = formulario.elements[i];
-        alert("Elemento: " + elemento);
-        if(elemento.type==="textArea")
-            alert("Encontrado primo");
-        if(elemento.type==="text"){
+        
+        if(elemento.type==="text" || elemento.type==="textarea" ){            
             if(elemento.value===""){
                 alert("Debe rellenar el campo: " + elemento.name);
+                validado=false;
+            }else if(elemento.name==="telefono"){                
+                var regExp = /([0-9]{9})/; 
+                if(!elemento.value.match(regExp)){
+                    alert("Introduzca un telefono valido.");
+                    validado=false;
+                }
             }
         }
         if(elemento.type==="email"){
-            alert("Introduzca un email valido.");
+            var regExp = /([a-z\-_0-9]+@[a-z\-]*\.?[a-z]+\.[a-z\-]+)/; 
+            if(!elemento.value.match(regExp)){
+                alert("Introduzca un email valido.");
+                validado=false;
+            }            
         }
+        
     }
+    
+    if(validado){
+        alert('El formulario se ha enviado correctamente');
+        validado=false; /* Se pone el valor a false par que no salga mensaje de error al no tener script de envio */
+        
+    }
+    return validado;
 }
 
