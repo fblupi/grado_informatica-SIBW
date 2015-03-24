@@ -33,3 +33,31 @@ function sliderAsidePatro() {
     
     contImagenPatro++;
  } 
+
+function isEmpty(campo){
+    if(campo.value===""){
+        return true;
+    }else{
+       return false; 
+    }
+}
+
+function validar(){
+    var formulario = document.forms['contact_form'];
+    
+    for(var i=0; i<formulario.elements.length; i++){
+        var elemento = formulario.elements[i];
+        alert("Elemento: " + elemento);
+        if(elemento.type==="textArea")
+            alert("Encontrado primo");
+        if(elemento.type==="text"){
+            if(elemento.value===""){
+                alert("Debe rellenar el campo: " + elemento.name);
+            }
+        }
+        if(elemento.type==="email"){
+            alert("Introduzca un email valido.");
+        }
+    }
+}
+

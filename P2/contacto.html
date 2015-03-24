@@ -6,6 +6,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script src="js/funciones.js"></script>
     </head>
     <body>
         <header id="cabecera">
@@ -29,7 +30,7 @@
         <div id="main">
             <div id="content">
                 <section>
-                    <form class="contact_form" action="" method="post" name="contact_form" novalidate>
+                    <form  id="formContacto" class="contact_form" action="" method="post" name="contact_form" novalidate>
                         <h1>Formulario de Contacto</h1>
                         <ul>
                             <li>
@@ -49,7 +50,7 @@
                                 <textarea name="message" cols="40" rows="6" placeholder="Descripción detallada del motivo de consulta" required></textarea>
                             </li>
                             <li>
-                                <button class="submit" type="submit">Enviar</button>
+                                <button class="submit" type="submit" onclick="validar();">Enviar</button>
                             </li>
                         </ul>
                     </form>
