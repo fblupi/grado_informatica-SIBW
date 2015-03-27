@@ -221,6 +221,21 @@ b {
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
+ul.sliderPatro{
+    list-style-type: none;
+}
+.imgSliderPatro{    
+    display: none;
+}
+
+#activeSliderPatro{
+    display: block;
+    margin: 5px;
+    width: 150px;
+    border: solid 1px #BBB;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
 /* Image-slider ***********************************************************/
 
 #main #content .image-slider img {

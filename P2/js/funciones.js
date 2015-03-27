@@ -1,45 +1,17 @@
-var contImagenPatro=0;
-var nPatrocinadores=4;
-
-function sliderAsidePatro() {
-    var objetoImagen = document.getElementById("imagen-patrocinador");
-    switch(contImagenPatro%nPatrocinadores){
-        case 0:
-            objetoImagen.alt="LogoETSIIT";
-            objetoImagen.title="LogoETSIIT";
-            objetoImagen.src="images/patrocinadores/LogoETSIIT.jpg";
-            break;
-        case 1:
-            objetoImagen.alt="LogoGitHub";
-            objetoImagen.title="LogoGitHub";
-            objetoImagen.src="images/patrocinadores/LogoGitHub.jpg";
-            break;
-        case 2:
-            objetoImagen.alt="LogoSpiral";
-            objetoImagen.title="LogoSpiral";
-            objetoImagen.src="images/patrocinadores/LogoSpiral.jpg";
-            break;
-        case 3:
-            objetoImagen.alt="LogoDGE";
-            objetoImagen.title="LogoDGE";
-            objetoImagen.src="images/patrocinadores/LogoDGE.jpg";
-            break;
-        default:
-            objetoImagen.alt="LogoETSIIT";
-            objetoImagen.title="LogoETSIIT";
-            objetoImagen.src="images/patrocinadores/LogoETSIIT.jpg";
-            break;            
-    }
+function slide(clase,id,tiempoTrans){
+    //En el css la clase 'clase' debe aparecer como display none. El id 'id' es el que marca qué imagen del slider es la que se muestra que puede tener cualquier estilo. En el html, la primera imagen debe ser la que tenga el id que indica que está activo.
     
-    contImagenPatro++;
- } 
-
-function isEmpty(campo){
-    if(campo.value===""){
-        return true;
-    }else{
-       return false; 
-    }
+    var imagenes =          document.getElementsByClassName(clase);
+    var cont=0;
+    var tama=imagenes.length;    
+    
+    setInterval(function(){        
+        imagenes[cont].removeAttribute('id');
+        cont=(cont+1)%tama;
+        imagenes[cont].setAttribute('id',id);
+        
+    },tiempoTrans);
+    
 }
 
 function validar(nombreFormulario){
