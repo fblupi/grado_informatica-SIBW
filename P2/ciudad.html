@@ -81,10 +81,23 @@
                     </ul>
                 </div>
                 <div id="patrocinadores">
-                    <h1>Patrocinadores</h1>                       
-                    <img class="patrocinador" id="imagen-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                    <h1>Patrocinadores</h1>                                 
+                    <ul class="sliderPatro">
+                        <li>
+                            <img class="imgSliderPatro" id="activeSliderPatro" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro" title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro" title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro"  title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                        </li>
+                    </ul>
                     <script type="text/javascript">
-                        setInterval("sliderAsidePatro()",3000);
+                        slide('imgSliderPatro','activeSliderPatro',3000);
                     </script>
                 </div>
             </aside>

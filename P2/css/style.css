@@ -221,14 +221,17 @@ b {
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
-ul.sliderPatro{
+/* Image-slider ***********************************************************/
+
+ul.sliderPatro, ul.sliderEtsiit, ul.sliderComoLlegar {
     list-style-type: none;
 }
-.imgSliderPatro{    
+
+.imgSliderPatro, .imgSliderEtsiit, .imgSliderComoLlegar {    
     display: none;
 }
 
-#activeSliderPatro{
+#activeSliderPatro {
     display: block;
     margin: 5px;
     width: 150px;
@@ -236,12 +239,12 @@ ul.sliderPatro{
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
-/* Image-slider ***********************************************************/
-
-#main #content .image-slider img {
+#activeSliderEtsiit, #activeSliderComoLlegar {
+    display: block;
+    margin-left: -40px;
     width: 670px;
     height: 250px;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
 }
 
 /* Mapa (ancho completo) **************************************************/
@@ -433,6 +436,14 @@ footer > #copyright {
     border: 1px solid #AAAAAA;
     box-shadow: 0px 0px 3px #CCCCCC, 0px 10px 15px #EEEEEE inset;
     border-radius: 2px;
+}
+
+.contact_form input.error, .contact_form textarea.error, .contact_form select.error {
+    border: 1px solid #B92326;
+}
+
+.contact_form input.valido, .contact_form textarea.valido, .contact_form select.valido {
+    border: 1px solid #008000;
 }
 
 button.submit {

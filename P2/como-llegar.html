@@ -33,8 +33,24 @@
                     <article>
                         <h1> Cómo llegar al congreso</h1>
                         <p>La sede del congreso estará en la Escuela Técnica Superior de Ingenierías Informática y Telecomunicación de Granada (ETSIIT).</p>
-                        <div class="image-slider">
-                            <img title="Autovía Sierra Nevada"  alt="autovia" src="images/como-llegar/coche.jpg"/>
+                        <div id="image-slider">
+                            <ul class="sliderComoLlegar">
+                                <li>
+                                    <img class="imgSliderComoLlegar" id="activeSliderComoLlegar" title="Autovía Sierra Nevada" alt="autovia" src="images/como-llegar/coche.jpg"/>
+                                </li>
+                                <li>
+                                    <img class="imgSliderComoLlegar" title="Estación de tren" alt="estacion tren" src="images/como-llegar/tren.jpg"/>
+                                </li>
+                                <li>
+                                    <img class="imgSliderComoLlegar" title="Estación de autobuses" alt="estacion autobuses" src="images/como-llegar/autobus.jpg"/>
+                                </li>
+                                <li>
+                                    <img class="imgSliderComoLlegar" title="Aeropuerto Federico García Lorca" alt="aeropuerto" src="images/como-llegar/aeropuerto.jpg"/>
+                                </li>
+                            </ul>
+                            <script type="text/javascript">
+                                slide('imgSliderComoLlegar','activeSliderComoLlegar',3000);
+                            </script>
                         </div>
                         <h2><i class="fa fa-car"></i> En coche</h2>
                         <p class="text-right">Desde la A-44 tomar la salida 125. En la rotonda coger la salida de la Avenida de la Constitución y, más adelante, girar a la izquierda hacia la Calle Periodista Eugenio Selles. Al final de esta calle se encuentra la sede.</p>
@@ -78,10 +94,23 @@
                     </ul>
                 </div>
                 <div id="patrocinadores">
-                    <h1>Patrocinadores</h1>                       
-                    <img class="patrocinador" id="imagen-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                    <h1>Patrocinadores</h1>                                 
+                    <ul class="sliderPatro">
+                        <li>
+                            <img class="imgSliderPatro" id="activeSliderPatro" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro" title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro" title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                        </li>
+                        <li>
+                            <img class="imgSliderPatro"  title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                        </li>
+                    </ul>
                     <script type="text/javascript">
-                        setInterval("sliderAsidePatro()",3000);
+                        slide('imgSliderPatro','activeSliderPatro',3000);
                     </script>
                 </div>
             </aside>
