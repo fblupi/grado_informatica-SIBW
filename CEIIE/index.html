@@ -30,11 +30,21 @@
         <div id="main">
             <div id="content">
                 <section>
-                    <div class="image-slider">
-                        <img title="ETSIIT" alt="etsiit" src="images/etsiit/etsiit1.jpg"/>
-                    </div>
                     <article> 
                         <h1>I Congreso de Estudiantes de Ingeniería Informática de España</h1>
+                        <div id="image-slider">
+                            <div id="container-slider">
+                                <div class="image-slide">
+                                    <img title="ETSIIT frontal" alt="etsiit frontal" src="images/etsiit/etsiit1.jpg"/>
+                                </div>
+                                <div class="image-slide">
+                                    <img title="ETSIIT trasero" alt="etsiit trasero" src="images/etsiit/etsiit2.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            rotarSlider('image-slider','container-slider',2,670,1);
+                        </script>
                         <p>El primer Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) es un evento dirigido a alumnos y profesores de ingeniería informática de todas las universidades del país. </p>
                         <p>Se realizarán actividades y conferencias que cubren todos los campos relacionados con la informática, y dentro de cada uno de ellos se presentan, por medio de comunicaciones, los aspectos más innovadores, y con mayor proyección futura, siempre desde una perspectiva eminentemente universitaria y científica.</p>
                         <p>Uno de los objetivos es fomentar las relaciones e intercambios entre las distintas universidades de España en un campo en continua expansión como es el de la informática.</p>
@@ -65,10 +75,25 @@
                     </ul>
                 </div>
                 <div id="patrocinadores">
-                    <h1>Patrocinadores</h1>                       
-                    <img class="patrocinador" id="imagen-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                    <h1>Patrocinadores</h1> 
+                    <div id="patrocinador-slider">
+                        <div id="patrocinador-container-slider">
+                            <div class="patrocinador-slide">
+                                <img title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                            </div>
+                        </div>
+                    </div>
                     <script type="text/javascript">
-                        setInterval("sliderAsidePatro()",3000);
+                        rotarSlider('patrocinador-slider','patrocinador-container-slider',4,150,10);
                     </script>
                 </div>
             </aside>

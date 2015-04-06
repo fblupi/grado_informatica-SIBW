@@ -6,6 +6,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script src="js/funciones.js"></script>
     </head>
     <body>
         <header id="cabecera">
@@ -32,9 +33,25 @@
                     <article>
                         <h1> Cómo llegar al congreso</h1>
                         <p>La sede del congreso estará en la Escuela Técnica Superior de Ingenierías Informática y Telecomunicación de Granada (ETSIIT).</p>
-                        <div class="image-slider">
-                            <img title="Autovía Sierra Nevada"  alt="autovia" src="images/como-llegar/coche.jpg"/>
+                        <div id="image-slider">
+                            <div id="container-slider">
+                                <div class="image-slide">
+                                    <img title="Autovía Sierra Nevada" alt="autovia" src="images/como-llegar/coche.jpg"/>
+                                </div>
+                                <div class="image-slide">
+                                    <img title="Estación de tren" alt="estacion tren" src="images/como-llegar/tren.jpg"/>
+                                </div>
+                                <div class="image-slide">
+                                    <img title="Estación de autobuses" alt="estacion autobuses" src="images/como-llegar/autobus.jpg"/>
+                                </div>
+                                <div class="image-slide">
+                                    <img title="Aeropuerto Federico García Lorca" alt="aeropuerto" src="images/como-llegar/aeropuerto.jpg"/>
+                                </div>
+                            </div>
                         </div>
+                        <script type="text/javascript">
+                            rotarSlider('image-slider','container-slider',4,670,1);
+                        </script>
                         <h2><i class="fa fa-car"></i> En coche</h2>
                         <p class="text-right">Desde la A-44 tomar la salida 125. En la rotonda coger la salida de la Avenida de la Constitución y, más adelante, girar a la izquierda hacia la Calle Periodista Eugenio Selles. Al final de esta calle se encuentra la sede.</p>
 
@@ -75,6 +92,28 @@
                         <li><a href="http://www.ugr.es/">Universidad de Granada</a></li>
                         <li><a href="http://etsiit.ugr.es/">Escuela Técnica Superior de Ingnierías Informática y Telecomunicación</a></li>
                     </ul>
+                </div>
+                 <div id="patrocinadores">
+                    <h1>Patrocinadores</h1> 
+                    <div id="patrocinador-slider">
+                        <div id="patrocinador-container-slider">
+                            <div class="patrocinador-slide">
+                                <img title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                            </div>
+                            <div class="patrocinador-slide">
+                                <img title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        rotarSlider('patrocinador-slider','patrocinador-container-slider',4,150,10);
+                    </script>
                 </div>
             </aside>
         </div> <!-- end main -->

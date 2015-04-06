@@ -1,19 +1,18 @@
-function slide(clase, id, tiempoTrans) {
-    // En el css la clase 'clase' debe aparecer como display none. 
-    // El id 'id' es el que marca qué imagen del slider es la que se muestra que puede tener cualquier estilo. 
-    // En el html, la primera imagen debe ser la que tenga el id que indica que está activo.
-    
-    var imagenes = document.getElementsByClassName(clase),
-        cont = 0,
-        tama = imagenes.length;
-    
-    setInterval(function () {
-        imagenes[cont].removeAttribute('id');
-        cont = (cont + 1) % tama;
-        imagenes[cont].setAttribute('id', id);
-        
-    }, tiempoTrans);
-    
+function rotarSlider(id, contenedor, numElementos, width, velocidad) {
+    document.getElementById(contenedor).setAttribute("style", "width:" + numElementos * width + "px");
+    var slider = document.getElementById(id),
+        totalWidth = (numElementos - 1) * width,
+        posicion = 0;
+    function rotacion() {
+        posicion = document.getElementById(id).scrollLeft;
+        posicion += 1;
+        if (posicion > totalWidth) {
+            slider.scrollLeft = 0;
+        } else {
+            slider.scrollLeft = posicion;
+        }
+    }
+    var timer = setInterval(rotacion, velocidad);
 }
 
 function validar(nombreFormulario) {

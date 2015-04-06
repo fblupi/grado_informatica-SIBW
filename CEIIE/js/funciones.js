@@ -1,35 +1,69 @@
-var contImagenPatro=0;
-var nPatrocinadores=4;
+function rotarSlider(id, contenedor, numElementos, width, velocidad) {
+    document.getElementById(contenedor).setAttribute("style", "width:" + numElementos * width + "px");
+    var slider = document.getElementById(id),
+        totalWidth = (numElementos - 1) * width,
+        posicion = 0;
+    function rotacion() {
+        posicion = document.getElementById(id).scrollLeft;
+        posicion += 1;
+        if (posicion > totalWidth) {
+            slider.scrollLeft = 0;
+        } else {
+            slider.scrollLeft = posicion;
+        }
+    }
+    var timer = setInterval(rotacion, velocidad);
+}
 
-function sliderAsidePatro() {
-    var objetoImagen = document.getElementById("imagen-patrocinador");
-    switch(contImagenPatro%nPatrocinadores){
-        case 0:
-            objetoImagen.alt="LogoETSIIT";
-            objetoImagen.title="LogoETSIIT";
-            objetoImagen.src="images/patrocinadores/LogoETSIIT.jpg";
-            break;
-        case 1:
-            objetoImagen.alt="LogoGitHub";
-            objetoImagen.title="LogoGitHub";
-            objetoImagen.src="images/patrocinadores/LogoGitHub.jpg";
-            break;
-        case 2:
-            objetoImagen.alt="LogoSpiral";
-            objetoImagen.title="LogoSpiral";
-            objetoImagen.src="images/patrocinadores/LogoSpiral.jpg";
-            break;
-        case 3:
-            objetoImagen.alt="LogoDGE";
-            objetoImagen.title="LogoDGE";
-            objetoImagen.src="images/patrocinadores/LogoDGE.jpg";
-            break;
-        default:
-            objetoImagen.alt="LogoETSIIT";
-            objetoImagen.title="LogoETSIIT";
-            objetoImagen.src="images/patrocinadores/LogoETSIIT.jpg";
-            break;            
+function validar(nombreFormulario) {
+    var formulario = document.forms[nombreFormulario],
+        validado = true,
+        elemento,
+        regExp,
+        i;
+    
+    for (i = 0; i < formulario.elements.length; i += 1) {
+        elemento = formulario.elements[i];
+        
+        if (elemento.type === "text" || elemento.type === "textarea") { // Elemento de texto o área de texto
+            if (elemento.value === "") { // Campo vacío
+                //alert("Debe rellenar el campo: " + elemento.name);
+                elemento.setAttribute("class", "error");
+                validado = false;
+            } else {
+                elemento.setAttribute("class", "valido");
+            }
+            
+            if (elemento.name === "telefono") { // Campo telefónico
+                regExp = /([0-9]{9})/;
+                if (!elemento.value.match(regExp)) { // Teléfono incorrecto
+                    //alert("Introduzca un telefono valido.");
+                    elemento.setAttribute("class", "error");
+                    validado = false;
+                } else {
+                    elemento.setAttribute("class", "valido");
+                }
+            }
+        }
+        
+        if (elemento.type === "email") { // Campo de email
+            regExp = /([a-z\-_0-9]+@[a-z\-]*\.?[a-z]+\.[a-z\-]+)/;
+            if (!elemento.value.match(regExp)) { // email incorrecto
+                //alert("Introduzca un email valido.");
+                elemento.setAttribute("class", "error");
+                validado = false;
+            } else {
+                elemento.setAttribute("class", "valido");
+            }
+        }
+        
     }
     
-    contImagenPatro++;
- } 
+    if (validado) {
+        alert("El formulario se ha enviado correctamente");
+        validado = false; // Se pone el valor a false par que no salga mensaje de error al no tener script de envío
+        
+    }
+    
+    return validado;
+}
