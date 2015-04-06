@@ -31,19 +31,15 @@
             <div id="content">
                 <section>
                     <article> 
-                        <h1>I Congreso de Estudiantes de Ingeniería Informática de España</h1>
-                        <div id="image-slider">
-                            <div id="container-slider">
-                                <div class="image-slide">
-                                    <img title="ETSIIT frontal" alt="etsiit frontal" src="images/etsiit/etsiit1.jpg"/>
-                                </div>
-                                <div class="image-slide">
-                                    <img title="ETSIIT trasero" alt="etsiit trasero" src="images/etsiit/etsiit2.jpg"/>
-                                </div>
-                            </div>
+                        <h1>I Congreso de Estudiantes de Ingeniería Informática de España</h1>                        
+                        <div id="contenedor-slider-etsiit">
+                            <ul class="slider">
+                                <li><img class="slider-etsiit" id="active-slider-etsiit" src="images/etsiit/etsiit1.jpg"></li>
+                                <li><img class="slider-etsiit" src="images/etsiit/etsiit2.jpg"></li>
+                            </ul>                                                    
                         </div>
                         <script type="text/javascript">
-                            rotarSlider('image-slider','container-slider',2,670,1);
+                            slide('slider-etsiit','active-slider-etsiit',4000);
                         </script>
                         <p>El primer Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) es un evento dirigido a alumnos y profesores de ingeniería informática de todas las universidades del país. </p>
                         <p>Se realizarán actividades y conferencias que cubren todos los campos relacionados con la informática, y dentro de cada uno de ellos se presentan, por medio de comunicaciones, los aspectos más innovadores, y con mayor proyección futura, siempre desde una perspectiva eminentemente universitaria y científica.</p>
@@ -73,27 +69,22 @@
                         <li><a href="http://www.ugr.es/">Universidad de Granada</a></li>
                         <li><a href="http://etsiit.ugr.es/">Escuela Técnica Superior de Ingnierías Informática y Telecomunicación</a></li>
                     </ul>
-                </div>
+                </div>                
                 <div id="patrocinadores">
-                    <h1>Patrocinadores</h1> 
-                    <div id="patrocinador-slider">
-                        <div id="patrocinador-container-slider">
-                            <div class="patrocinador-slide">
-                                <img title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>Patrocinadores</h1>
+                    <ul class="slider-patro">
+                        <li><img class="slider-patrocinador" id="active-slider-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/></li>
+                        <li>
+                        <li><img class="slider-patrocinador" title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                        </li>
+                        <li><img class="slider-patrocinador" title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                        </li>
+                        <li>
+                        <img class="slider-patrocinador"  title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                        </li>
+                    </ul>
                     <script type="text/javascript">
-                        rotarSlider('patrocinador-slider','patrocinador-container-slider',4,150,10);
+                        slide('slider-patrocinador','active-slider-patrocinador',4000);
                     </script>
                 </div>
             </aside>
