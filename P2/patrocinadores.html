@@ -58,25 +58,20 @@
                     </ul>
                 </div>
                 <div id="patrocinadores">
-                    <h1>Patrocinadores</h1> 
-                    <div id="patrocinador-slider">
-                        <div id="patrocinador-container-slider">
-                            <div class="patrocinador-slide">
-                                <img title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
-                            </div>
-                            <div class="patrocinador-slide">
-                                <img title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>Patrocinadores</h1>
+                    <ul class="slider-patro">
+                        <li><img class="slider-patrocinador" id="active-slider-patrocinador" title="LogoDGE" alt="LogoDGE" src="images/patrocinadores/LogoDGE.jpg"/></li>
+                        <li>
+                        <li><img class="slider-patrocinador" title="LogoETSIIT" alt="LogoEtsiit" src="images/patrocinadores/LogoETSIIT.jpg"/>
+                        </li>
+                        <li><img class="slider-patrocinador" title="LogoGitHub" alt="LogoGitHub" src="images/patrocinadores/LogoGitHub.jpg"/>
+                        </li>
+                        <li>
+                        <img class="slider-patrocinador"  title="LogoSpiral" alt="LogoSpiral" src="images/patrocinadores/LogoSpiral.jpg"/>
+                        </li>
+                    </ul>
                     <script type="text/javascript">
-                        rotarSlider('patrocinador-slider','patrocinador-container-slider',4,150,10);
+                        slide('slider-patrocinador','active-slider-patrocinador',4000);
                     </script>
                 </div>
             </aside>
