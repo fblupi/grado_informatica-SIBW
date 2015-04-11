@@ -191,16 +191,16 @@ b {
     text-align: justify;
 }
 
-#main #content section article a {
+#main #content section a {
     text-decoration: none;
     color: #B92326;
 }
 
-#main #content section article a:visited {
+#main #content section a:visited {
     color: #A52A2A;
 }
 
-#main #content section article a:active {
+#main #content section a:active {
     color: #FF0000;
 }
 
