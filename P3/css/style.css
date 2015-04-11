@@ -100,6 +100,10 @@ b {
     cursor: pointer   
 }
 
+#menu li.sub-active > a {
+    cursor: default;
+}
+
 /* Submenu ****************************************************************/
 
 #menu > ul ul.sub {
@@ -202,6 +206,10 @@ b {
 
 #main #content section a:active {
     color: #FF0000;
+}
+
+#main p.go-back {
+    text-align: right;
 }
 
 .direcciones {
