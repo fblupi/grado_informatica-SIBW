@@ -100,6 +100,10 @@ b {
     cursor: pointer   
 }
 
+#menu li.sub-active > a {
+    cursor: default;
+}
+
 /* Submenu ****************************************************************/
 
 #menu > ul ul.sub {
@@ -191,17 +195,25 @@ b {
     text-align: justify;
 }
 
-#main #content section article a {
+#main #content section a {
     text-decoration: none;
     color: #B92326;
 }
 
-#main #content section article a:visited {
+#main #content section a:visited {
     color: #A52A2A;
 }
 
-#main #content section article a:active {
+#main #content section a:active {
     color: #FF0000;
+}
+
+#main p.go-back {
+    text-align: right;
+}
+
+#main blockquote p {
+    font-style: italic;
 }
 
 .direcciones {
@@ -242,7 +254,6 @@ ul.slider-patro{
 .slider-patrocinador{
     position: absolute;     
     opacity: 0;
-    margin: 5px;
     width: 150px;
     border: solid 1px #BBB;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);    
@@ -254,7 +265,6 @@ ul.slider-patro{
 
 #active-slider-patrocinador {       
     display: block;
-    margin: 5px;
     width: 150px;
     border: solid 1px #BBB;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -266,18 +276,17 @@ ul.slider-patro{
     
 }
 
-
-#contenedor-slider-transporte{
+#contenedor-slider-transporte, #contenedor-slider-etsiit, #contenedor-slider-sierra-nevada, #contenedor-slider-alhambra {
     display: inline-block;
     float:left;
     position: relative;
     height: 290px; 
     width: 670px;
 }
-.slider-transporte{
+
+.slider-transporte, .slider-etsiit, .slider-sierra-nevada, .slider-alhambra {
     position: absolute;     
-    opacity: 0;
-    margin: 5px;    
+    opacity: 0;   
     border: solid 1px #BBB;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);    
     -webkit-transition: opacity 2s ease-in-out;
@@ -286,42 +295,8 @@ ul.slider-patro{
     transition: opacity 2s ease-in-out;   
 }
 
-#active-slider-transporte{
-    display: block;
-    margin: 5px;    
-    border: solid 1px #BBB;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    opacity: 1;
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out; 
-}
-
-#contenedor-slider-etsiit{
-    display: inline-block;
-    float:left;
-    position: relative;
-    height: 300px; 
-    width: 670px;
-}
-
-
-.slider-etsiit{
-    position: absolute;     
-    opacity: 0;
-    margin: 5px;    
-    border: solid 1px #BBB;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);    
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;   
-}
-
-#active-slider-etsiit{
-    display: block;
-    margin: 5px;    
+#active-slider-transporte, #active-slider-etsiit, #active-slider-sierra-nevada, #active-slider-alhambra {
+    display: block; 
     border: solid 1px #BBB;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
     opacity: 1;
