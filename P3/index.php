@@ -9,14 +9,13 @@
         <script src="js/funciones.js"></script> 
     </head>
     <body>
-        <?php
-            $activo="home";
+        <?php            
             include 'contenido/comun/header.php';
         ?>
         <div id="main">
             
             <?php
-                include 'contenido/content-index.php';
+                include 'contenido/content.php';
                 include 'contenido/comun/aside.php';
             ?>            
         </div> <!-- end main -->
