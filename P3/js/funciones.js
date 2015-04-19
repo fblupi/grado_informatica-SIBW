@@ -58,9 +58,7 @@ function validar(nombreFormulario) {
     }
     
     if (validado) {
-        alert("El formulario se ha enviado correctamente");
-        validado = false; // Se pone el valor a false par que no salga mensaje de error al no tener script de envío
-        
+        alert("El formulario se ha enviado correctamente");        
     }
     
     return validado;

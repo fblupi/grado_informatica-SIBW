@@ -1,6 +1,6 @@
 <div id="content">
     <section>
-        <form  id="formContacto" class="contact_form" action="" method="post" name="contact_form" onsubmit="return validar('contact_form');" novalidate>
+        <form  id="formContacto" class="contact_form" action="php/mail.php" method="post" name="contact_form">
             <h1>Formulario de Contacto</h1>
             <ul>
                 <li>
