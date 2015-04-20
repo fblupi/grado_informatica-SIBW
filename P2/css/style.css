@@ -567,23 +567,73 @@ button.submit:active {
      
 }
 
+/**************************************************************************/
+/* TABLA ******************************************************************/
+/**************************************************************************/
 
+table {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd;
+}
 
+thead {
+    vertical-align: middle;
+}
 
+tbody {
+    vertical-align: middle;
+}
 
+th {
+    text-align: left;
+    text-transform: uppercase;
+}
 
+table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
 
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    padding: 6px;
+    text-align: center;
+}
 
+table>tbody>tr:nth-child(odd)>td {
+    background-color: #f9f9f9;
+}
 
+table>tbody>tr>td {
+    padding: 6px;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
 
+table>tbody>tr>td:first-child {
+    font-size: 11px;
+    vertical-align: middle;
+}
 
+table>tbody>tr>td>p.title {
+    text-transform: uppercase;
+}
 
+table>tbody>tr>td a {
+    text-decoration: none;
+    color: #B92326;
+}
 
-
-
-
-
-
+table>tbody>tr>td a:visited {
+    color: #A52A2A;
+}
 
 
 
