@@ -1,0 +1,83 @@
+**DÍA 1
+*ING. SOFTWARE
+Metodologías Ágiles, por M. Noquera
+El desarrollo ágil de software refiere a métodos de ingeniería del software basados en el desarrollo iterativo e incremental, donde los requisitos y soluciones evolucionan mediante la colaboración de grupos auto organizados y multidisciplinarios. Existen muchos métodos de desarrollo ágil; la mayoría minimiza riesgos desarrollando software en lapsos cortos. El software desarrollado en una unidad de tiempo es llamado una iteración, la cual debe durar de una a cuatro semanas. Cada iteración del ciclo de vida incluye: planificación, análisis de requisitos, diseño, codificación, revisión y documentación. Una iteración no debe agregar demasiada funcionalidad para justificar el lanzamiento del producto al mercado, sino que la meta es tener una "demo" (sin errores) al final de cada iteración. Al final de cada iteración el equipo vuelve a evaluar las prioridades del proyecto.
+
+IFML, por M. Cabrera
+IFML (Interaction Flow Modeling Language) es un lenguaje de modelado estándar en el campo de la ingeniería de software. IFML incluye un conjunto de notaciones gráficas para crear modelos visuales de las interacciones del usuario y el comportamiento de aplicaciones para el usuario en los sistemas de software.
+IFML fue desarrollado en 2012 y 2013 bajo la dirección de WebRatio y fue inspirado por la notación WebML, así como por algunas otras experiencias en el campo de la modelización Web.
+
+PRINCE2, por M.J. Rodríguez
+PRINCE2(R) (PRojects IN Controlled Environment) es un método estructurado de gestión de proyectos. Es una aproximación a las "buenas prácticas" para la gestión de todo tipo de proyectos que se ha convertido en el estándar de facto para la organización, gestión y control de proyectos.
+El método divide los proyectos en fases manejables permitiendo el control eficiente de los recursos y el control periódico de su evolución. PRINCE2 está "basado en los productos", es decir, los planes del proyecto se centran en obtener resultados concretos, y no sólo en la planificación de las actividades que se llevan a cabo; PRINCE2 proporciona un lenguaje común en los proyectos.
+
+*INFORMÁTICA GRÁFICA
+Visualización y Realismo, por C. Ureña
+El concepto de realismo aplicado a la generación de imágenes de síntesis es uno de los elementos de la informática gráfica cuya evolución ha sido más visible. Desde la eliminación de las partes ocultas de los 70 hasta las estrategias basadas en la verdadera simulación del comportamiento físico del transporte de la luz; hemos transitado por los llamados modelos empíricos, los transicionales que incorporaban los fenómenos ópticos, los analíticos basados en el concepto de equilibrio energético.
+Como en otros ámbitos de la investigación, probablemente en todos los que lo son de verdad, los avances en la generación de imágenes de síntesis más y más realistas ha llevado a resultados que han inspirado nuevos temas de investigación y han abierto nuevos campos de aplicación de dichos resultados o de las técnicas concebidas para alcanzarlos
+
+Digitalización 3D, por F.J. Melero
+La digitalización en 3D facilita la digitalización rápida y flexible de las dimensiones de los modelos, herramientas, prototipos y muchos otros objetos formados como desee, independientemente del tipo de material en tiempo real.
+Como procedimiento sin contacto la digitalización en 3D proporciona los datos exactos de la geometría de la pieza componente.
+Tamaño de la pieza que se va a escanear puede ser de 1 mm hasta 10 m. Para la comparación de tolerancias, modelos de volumen pueden compararse con estos datos con los datos de diseño CAD o incluso nuevas herramientas y modelos que forman pueden ser hechas.
+
+Realidad Aumentada, por J. Revelles
+La realidad aumentada (RA) es el término que se usa para definir una visión a través de un dispositivo tecnológico, directa o indirecta, de un entorno físico del mundo real, cuyos elementos se combinan con elementos virtuales para la creación de una realidad mixta en tiempo real. Consiste en un conjunto de dispositivos que añaden información virtual a la información física ya existente, es decir, añadir una parte sintética virtual a lo real. Esta es la principal diferencia con la realidad virtual, puesto que no sustituye la realidad física, sino que sobreimprime los datos informáticos al mundo real.
+
+*BASES DE DATOS
+Bases de Datos Multidimensionales, por E. Garví
+Las bases de datos multidimensionales se utilizan principalmente para crear aplicaciones OLAP y pueden verse como bases de datos de una sola tabla, su peculiaridad es que por cada dimensión tienen un campo (o columna), y otro campo por cada métrica o hecho.
+Cada una de estas tablas puede asimilarse a un hipercubo o -más concretamente si de herramientas OLAP se trata- a un cubo OLAP, donde las dimensiones del mismo se corresponden los campos de dimensiones de la tabla, y el valor almacenado en cada celda del cubo equivale a la métrica o métricas almacenadas en la tabla.
+
+Bases de Datos Orientadas a Objetos, por J. Samos
+En una base de datos orientada a objetos, la información se representa mediante objetos como los presentes en la programación orientada a objetos. Cuando se integra las características de una base de datos con las de un lenguaje de programación orientado a objetos, el resultado es un sistema gestor de base de datos orientada a objetos (ODBMS, object database management system). Un ODBMS hace que los objetos de la base de datos aparezcan como objetos de un lenguaje de programación en uno o más lenguajes de programación a los que dé soporte. Un ODBMS extiende los lenguajes con datos persistentes de forma transparente, control de concurrencia, recuperación de datos, consultas asociativas y otras capacidades.
+Las bases de datos orientadas a objetos se diseñan para trabajar bien en conjunción con lenguajes de programación orientados a objetos como Java, C#, Visual Basic.NET y C++. Los ODBMS usan exactamente el mismo modelo que estos lenguajes de programación.
+
+Bases de Datos Distribuidas, por C.Delgado
+Una base de datos distribuida (BDD) es un conjunto de múltiples bases de datos lógicamente relacionadas las cuales se encuentran distribuidas en diferentes espacios lógicos (pej. un servidor corriendo 2 máquinas virtuales) e interconectados por una red de comunicaciones. Dichas BDD tienen la capacidad de realizar procesamiento autónomo, esto permite realizar operaciones locales o distribuidas. Un sistema de Bases de Datos Distribuida (SBDD) es un sistema en el cual múltiples sitios de bases de datos están ligados por un sistema de comunicaciones de tal forma que, un usuario en cualquier sitio puede acceder los datos en cualquier parte de la red exactamente como si estos fueran accedidos de forma local.
+
+*COMPILADORES
+Procesadores de Lenguajes, por J. Revelles
+El procesamiento de lenguajes naturales -abreviado PLN, o NLP del idioma inglés Natural Language Processing- es un campo de las ciencias de la computación, inteligencia artificial y lingüística que estudia las interacciones entre las computadoras y el lenguaje humano. El PLN se ocupa de la formulación e investigación de mecanismos eficaces computacionalmente para la comunicación entre personas y máquinas por medio de lenguajes naturales.
+
+Traductores, por R. López-Cózar
+En ciencias de la computación, intérprete o interpretador es un programa informático capaz de analizar y ejecutar otros programas. Los intérpretes se diferencian de los compiladores o de los ensambladores en que mientras estos traducen un programa desde su descripción en un lenguaje de programación al código de máquina del sistema, los intérpretes sólo realizan la traducción a medida que sea necesaria, típicamente, instrucción por instrucción, y normalmente no guardan el resultado de dicha traducción.
+
+Procesamiento de Habla, por Z. Callejas
+La interacción "tradicional" con un ordenador se basa en el uso de la pantalla, el teclado y el ratón, y requiere que el usuario tenga unos conocimientos básicos acerca del funcionamiento del ordenador. Además, este tipo de interacción conlleva una barrera difícil de superar para usuarios potenciales que padecen determinadas discapacidades (p. e. invidentes o personas con problemas de movilidad).
+Para solventar estas limitaciones se están desarrollando y perfeccionando técnicas de Procesamiento del Habla e Interacción Multimodal con objeto de facilitar el uso del ordenador a todo tipo de usuarios. Mediante estas técnicas se posibilita el uso de diversos dispositivos (p. e. PCs, PDAs, Tablet PCs) y se reducen los conocimientos informáticos necesarios. Además, se incorporan mecanismos de interacción adicionales para usuarios con necesidades específicas. Por ejemplo, el usuario puede usar el ordenador empleando su voz, señalando a la pantalla con sus ojos, realizando gestos o expresiones faciales, etc. Todo ello favorece que el ordenador se pueda adaptar a las necesidades específicas de cada usuario.
+La interacción multimodal permite asimismo el desarrollo de nuevas aplicaciones informáticas. En algunos casos el ordenador incluso deja de ser visible y se limita a estar activo en todo momento, en un segundo plano, para informar al usuario cuando sea necesario (p. e. cuando las luces de la casa se hayan quedado encendidas indebidamente). Asimismo, en caso de emergencia, el ordenador puede llegar a ponerse en contacto automáticamente con los servicios sanitarios.
+
+**DÍA 2
+*SISTEMAS OPERATIVOS
+Sistemas Windows, por A. León
+Microsoft Windows (conocido generalmente como Windows o MS Windows), es el nombre de una familia de distribuciones para PC, smartphone, servidores y sistemas empotrados, desarrollados y vendidos por Microsoft, y disponibles para múltiples arquitecturas, tales como x86 y ARM. Desde un punto de vista técnico, estas no son sistemas operativos, sino que contienen uno (tradicionalmente MS-DOS, o el más actual cuyo núcleo es Windows NT) junto con una amplia variedad de software; no obstante, es usual (aunque no necesariamente correcto) denominar al conjunto como sistema operativo en lugar de distribución. Microsoft introdujo un entorno operativo denominado Windows el 20 de noviembre de 1985 como un complemento para MS-DOS en respuesta al creciente interés en las interfaces gráficas de usuario (GUI). Microsoft Windows llegó a dominar el mercado mundial de computadoras personales, con más del 90% de la cuota de mercado, superando a Mac OS, que había sido introducido en 1984.
+
+Sistemas Unix/Linux, por P. Paderewski
+Unix (registrado oficialmente como UNIX®) es un Sistema operativo portable, multitarea y multiusuario; desarrollado, en principio, en 1969, por un grupo de empleados de los laboratorios Bell de AT&T, entre los que figuran Ken Thompson, Dennis Ritchie y Douglas McIlroy.
+El sistema, junto con todos los derechos fueron vendidos por AT&T a Novell, Inc. Esta vendió posteriormente el software a Santa Cruz Operation en 1995, y esta, a su vez, lo revendió a Caldera Software en 2001, empresa que después se convirtió en el grupo SCO. Sin embargo, Novell siempre argumentó que solo vendió los derechos de uso del software, pero que retuvo el copyright sobre "UNIX®". En 2010, y tras una larga batalla legal, ésta ha pasado nuevamente a ser propiedad de Novell.
+
+Sistemas iOS/Mac, por R. Montes
+OS X, antes llamado Mac OS X, es un entorno operativo basado en Unix, desarrollado, comercializado y vendido por Apple Inc. Ha sido incluido en su gama de computadoras Macintosh desde el año de 2002. OS X es el sucesor del Mac OS 9 (la versión final del Mac OS Classic), el sistema operativo de Apple desde 1984. Está basado en BSD, y se construyó sobre las tecnologías desarrolladas en NeXT entre la segunda mitad de los 80's y finales de 1996, cuando Apple adquirió esta compañía. Técnicamente, no es un sistema operativo, sino que incluye uno (Darwin, cuyo núcleo es XNU). Desde la versión Mac OS X 10.5 Leopard para procesadores Intel, el sistema tiene la certificación UNIX 03.
+
+*SISTEMAS COMPLEJOS
+Programación Paralela, por J.M. Mantas
+La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente,1 operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente (en paralelo). Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo en la computación de altas prestaciones, pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia. Como el consumo de energía —y por consiguiente la generación de calor— de las computadoras constituye una preocupación en los últimos años,la computación en paralelo se ha convertido en el paradigma dominante en la arquitectura de computadores, principalmente en forma de procesadores multinúcleo.
+
+Sistemas Distribuidos, por J.L. Garrido
+Un sistema distribuido se define como una colección de computadoras separadas físicamente y conectadas entre sí por una red de comunicaciones; cada máquina posee sus componentes de hardware y software que el programador percibe como un solo sistema (no necesita saber qué cosas están en qué máquinas). El programador accede a los componentes de software (objetos) remotos, de la misma manera en que accedería a componentes locales, en un grupo de computadoras que usan un middleware entre los que destacan (RPC) y SOAP para conseguir un objetivo.
+Los sistemas distribuidos deben ser muy confiables, ya que si un componente del sistema se descompone otro componente debe ser capaz de reemplazarlo. Esto se denomina tolerancia a fallos.
+
+Sistemas en Tiempo Real, por J.A. Holgado
+Un sistema de tiempo real es un sistema informático que interacciona con su entorno físico y responde a los estímulos del entorno dentro de un plazo de tiempo determinado. No basta con que las acciones del sistema sean correctas, sino que, además, tienen que ejecutarse dentro de un intervalo de tiempo determinado.
+Existen sistemas de tiempo real crítico (tiempo real duro), en los que los plazos de respuesta deben respetarse siempre estrictamente y una sola respuesta tardía a un suceso externo puede tener consecuencias fatales; y sistemas de tiempo real acrítico (tiempo real suave), en los que se pueden tolerar retrasos ocasionales en la respuesta a un suceso.
+
+*INTERFACES DE USUARIO
+Interacción Háptica, por F. Soler
+Los dispositivos "multi-touch", como el iPad, se han vuelto en los últimos dos años cada vez más populares. Hoy en día no sólo se utilizan para navegar y enviar correos electrónicos, sino también como un medio para nuevos campos de aplicación. Algo particular de estos dispositivos (tablets), casi una necesidad, es la falta de retroalimentación "háptica" (percepción háptica), lo que hace que sea difícil establecer parámetros de uso con precisión. En otras palabras, una respuesta al tacto que aumente la experiencia de la interacción.
+
+Wearables, por M. Cabrera
+Wearable hace referencia al conjunto de aparatos y dispositivos electrónicos que se incorporan en alguna parte de nuestro cuerpo interactuando continuamente con el usuario y con otros dispositivos con la finalidad de realizar alguna función específica, relojes inteligentes o smartwatchs, zapatillas de deportes con GPS incorporado y pulseras que monitorizan nuestro estado de salud son ejemplos entre otros de este tipo tecnología que se encuentra cada vez más presente en nuestras vidas.
+ 
+Realidad Virtual por J. Flores
+La realidad virtual es un entorno de escenas u objetos de apariencia real, generado mediante tecnología informática, que crea en el usuario la sensación de estar inmerso en él. Dicho entorno es contemplado por el usuario a través normalmente de un dispositivo conocido como gafas o casco de realidad virtual. Este puede ir acompañado de otros dispositivos, como guantes o trajes especiales, que permiten una mayor interacción con el entorno así como la percepción de diferentes estímulos que intensifican la sensación de realidad.
