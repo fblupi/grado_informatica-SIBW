@@ -276,7 +276,7 @@ ul.slider-patro{
     
 }
 
-#contenedor-slider-transporte, #contenedor-slider-etsiit, #contenedor-slider-sierra-nevada, #contenedor-slider-alhambra {
+#contenedor-slider-transporte, #contenedor-slider-etsiit, #contenedor-slider-sierra-nevada, #contenedor-slider-alhambra, #contenedor-slider-actividad {
     display: inline-block;
     float:left;
     position: relative;
@@ -284,7 +284,7 @@ ul.slider-patro{
     width: 670px;
 }
 
-.slider-transporte, .slider-etsiit, .slider-sierra-nevada, .slider-alhambra {
+.slider-transporte, .slider-etsiit, .slider-sierra-nevada, .slider-alhambra, .slider-actividad {
     position: absolute;     
     opacity: 0;   
     border: solid 1px #BBB;
@@ -295,7 +295,7 @@ ul.slider-patro{
     transition: opacity 2s ease-in-out;   
 }
 
-#active-slider-transporte, #active-slider-etsiit, #active-slider-sierra-nevada, #active-slider-alhambra {
+#active-slider-transporte, #active-slider-etsiit, #active-slider-sierra-nevada, #active-slider-alhambra, #active-slider-actividad {
     display: block; 
     border: solid 1px #BBB;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);

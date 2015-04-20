@@ -25,7 +25,7 @@
             break;
         case 'contacto':
             include 'contenido/content-contacto.php';
-            break;
+            break;        
         default:
             include 'contenido/content-index.php';
             break;

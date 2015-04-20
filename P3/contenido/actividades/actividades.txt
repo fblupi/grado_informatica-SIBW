@@ -1,70 +1,49 @@
-**SIERRA_NEVADA
+CODIGO=ALHAMBRA;
 
-*FOTOS
-sierra-nevada1.jpg
-sierra-nevada2.jpg
-sierra-nevada3.jpg
-sierra-nevada4.jpg
-*FIN
+TITULO=Visita a la Alhambra;
 
-*DESCRIPCION
-Sierra Nevada se encuentra en la parte central de la Cordillera Penib√©tica y es una de las areas monta√±osas m√°s extentas de la pen√≠nsula.
-Podr√° visitar el CAR, donde entrenan deportistas de la talla de Mireia Belmonte, campeona mundial de nataci√≥n.
-Adem√°s la visita incluye una hora de alquiler de trineo, para poder sentir la experiencia de deslizarse por la nieve, y una vuelta en el Trineo Ruso y competir con sus amigos para ver qui√©n es el m√°s r√°pido.
-*FIN
+IMAGEN1=alhambra1.jpg*
+IMAGEN2=alhambra2.jpg*
+IMAGEN3=alhambra3.jpg*
+IMAGEN4=alhambra4.jpg*
+IMAGEN5=alhambra5.jpg*;
 
-*DETALLES
-Visita al Centro de Alto Rendimiento (CAR) deportivo.
-1 hora de alquiler de trineos.
-1 vuelta en el Trineo Ruso.
-Incluye autob√∫s de ida y vuelta.
-Se recomienda llevar calzado c√≥modo.
-*FIN
+PARRAFO1=Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitectÛnicos m·s importantes de la Edad Media y m·ximo exponente del arte isl·mico en Occidente*
+PARRAFO2=La visita a la Alhambra, Patrimonio de la Humanidad por la UNESCO, es fundamental si va a pasar unos dÌas en la ciudad.*
+PARRAFO2=En esta visita se contar· con guÌas turÌsticos oficiales que le acompaÒar·n recorriendo un sitio ˙nico en el mundo.*;
 
-*FECHA
-D√≠a: 1 de Junio
-Hora de salida: 8:00 (ETSIIT)
-Hora de vuelta: 17:00 (Plaza de Pradollano)
-*FIN
+DETALLE1=Alcazaba: la zona m·s antigua del complejo con pasado militar.*
+DETALLE2=Palacios NazarÌes: destacan los Palacios del Mexuar, de Comares y de los Leones, m·ximo exponente del arte nazarÌ.*
+DETALLE3=Generalife: palacio de verano del sult·n, rodeado de extensos jardines.*
+DETALLE4=Incluye autob˙s de ida y vuelta.*;
 
-*PRECIO
-32‚Ç¨ (IVA inclu√≠do)
-*FIN
+FECHA=2 de Junio*
+HORA DE SALIDA=Hora de salida: 10:00 (EstaciÛn de Autobuses de Granada)*
+HORA DE VUELTA=Hora de vuelta: 18:00 (Punto de encuentro en la Alhambra)*;
 
-**FIN
+PRECIO=45Ä (IVA incluÌdo)*;
+##############################################################
+CODIGO=SIERRA-NEVADA;
 
+TITULO=Visita a Sieerra Nevada;
 
-**ALHAMBRA
+IMAGEN1=sierra-nevada1.jpg*
+IMAGEN2=sierra-nevada2.jpg*
+IMAGEN3=sierra-nevada3.jpg*
+IMAGEN4=sierra-nevada4.jpg*;
 
-*FOTOS
-alhambra1.jpg
-alhambra2.jpg
-alhambra3.jpg
-alhambra4.jpg
-alhambra5.jpg
-*FIN
+PARRAFO1=Sierra Nevada se encuentra en la parte central de la Cordillera PenibÈtica y es una de las areas montaÒosas m·s extentas de la penÌnsula.*
+PARRAFO2=Podr· visitar el CAR, donde entrenan deportistas de la talla de Mireia Belmonte, campeona mundial de nataciÛn.*
+PARRAFO3=Adem·s la visita incluye una hora de alquiler de trineo, para poder sentir la experiencia de deslizarse por la nieve, y una vuelta en el Trineo Ruso y competir con sus amigos para ver quiÈn es el m·s r·pido.*;
 
-*DESCRIPCION
-"Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitect√≥nicos m√°s importantes de la Edad Media y m√°ximo exponente del arte isl√°mico en Occidente".
-La visita a la Alhambra, Patrimonio de la Humanidad por la UNESCO, es fundamental si va a pasar unos d√≠as en la ciudad.
-En esta visita se contar√° con gu√≠as tur√≠sticos oficiales que le acompa√±ar√°n recorriendo un sitio √∫nico en el mundo.
-*FIN
+DETALLE1=Visita al Centro de Alto Rendimiento (CAR) deportivo.*
+DETALLE2=1 hora de alquiler de trineos.*
+DETALLE3=1 vuelta en el Trineo Ruso.*
+DETALLE4=Incluye autob˙s de ida y vuelta.*
+DETALLE5=Se recomienda llevar calzado cÛmodo.*;
 
-*DETALLES
-Alcazaba: la zona m√°s antigua del complejo con pasado militar.
-Palacios Nazar√≠es: destacan los Palacios del Mexuar, de Comares y de los Leones, m√°ximo exponente del arte nazar√≠.
-Generalife: palacio de verano del sult√°n, rodeado de extensos jardines.
-Incluye autob√∫s de ida y vuelta.
-*FIN
+FECHA=1 de Junio*
+HORA DE SALIDA=Hora de salida: 8:00 (ETSIIT)*
+HORA DE VUELTA=Hora de vuelta: 17:00 (Plaza de Pradollano)*;
 
-*FECHA
-D√≠a: 2 de Junio
-Hora de salida: 10:00 (Estaci√≥n de Autobuses de Granada)
-Hora de vuelta: 18:00 (Punto de encuentro en la Alhambra)
-*FIN
-
-*PRECIO
-45‚Ç¨ (IVA inclu√≠do)
-*FIN
-
-**FIN
+PRECIO=45Ä (IVA incluÌdo)*;
