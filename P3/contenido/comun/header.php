@@ -12,20 +12,13 @@
                 echo '<li><a href="index.php?cat=home">Home</a></li>';
             }
             //Categoria PROGRAMA o ACTIVIDADES
-            if($categoria=='programa'){
+            if($categoria=='programa' || $categoria=='actividades'){
                 echo'<li class="active"><a class="with-sub">Congreso</a>
                         <ul class="sub">
-                            <li class="sub-active"><a>Programa</a></li>
+                            <li><a href="index.php?cat=programa">Programa</a></li>
                             <li><a href="index.php?cat=actividades">Actividades</a></li>
                         </ul>
-                    </li>';
-            }else if ($categoria=='actividades'){
-                echo '<li class="active"><a class="with-sub">Congreso</a>
-                        <ul class="sub">
-                            <li><a href="index.php?cat=programa">Programa</a></li>
-                            <li class="sub-active"><a>Actividades</a></li>
-                        </ul>
-                    </li>';
+                    </li>';            
             }else{
                 echo'<li><a class="with-sub">Congreso</a>
                 <ul class="sub">
@@ -35,20 +28,13 @@
             </li>';
             }
             //Categoria CIUDAD o COMO LLEGAR
-            if($categoria=='ciudad'){
+            if($categoria=='ciudad' || $categoria=='como-llegar'){
                 echo '<li class="active"><a class="with-sub">Sede</a>
                         <ul class="sub">
-                            <li class="sub-active"><a>Ciudad</a></li>
-                            <li><a href="como-llegar.html">¿Cómo llegar?</a></li>
+                            <li><a href="index.php?cat=ciudad">Ciudad</a></li>
+                            <li><a href="index.php?cat=como-llegar">¿Cómo llegar?</a></li>
                         </ul>
-                    </li>';
-            }else if($categoria=='como-llegar'){
-                echo '<li class="active"><a class="with-sub">Sede</a>
-                        <ul class="sub">
-                            <li><a href="ciudad.html">Ciudad</a></li>
-                            <li class="sub-active"><a>¿Cómo llegar?</a></li>
-                        </ul>
-                    </li>';
+                    </li>';            
             }else{
                 echo '<li><a class="with-sub">Sede</a>
                 <ul class="sub">
