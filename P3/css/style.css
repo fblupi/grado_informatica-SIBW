@@ -100,10 +100,6 @@ b {
     cursor: pointer   
 }
 
-#menu li.sub-active > a {
-    cursor: default;
-}
-
 /* Submenu ****************************************************************/
 
 #menu > ul ul.sub {
@@ -185,6 +181,12 @@ b {
     font-size: 18px;
     color: #B92326;
     margin-bottom: 10px;
+}
+
+#main h3#ponente {
+    font-size: 16px;
+    font-style: italic;
+    text-align: right
 }
 
 #main #content section {
