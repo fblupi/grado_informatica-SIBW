@@ -335,6 +335,13 @@ ul.slider-patro{
     border: none;
 }
 
+#main aside h2 {
+    padding-left: 10px;
+    font-size: 14px;
+    border: none;
+    color: #333333;
+}
+
 #main aside #fechas, #main aside #redes-sociales, #main aside #enlaces {
     padding-right: 5px;
 }
@@ -372,7 +379,7 @@ ul.slider-patro{
 
 /* Enlaces ****************************************************************/
 
-#main aside #enlaces ul {
+#main aside #enlaces ul, #main aside #ponencias ul {
     list-style: none;
     padding-left: 10px;
     padding-right: 10px;
@@ -381,14 +388,14 @@ ul.slider-patro{
     border-left-width: 1px;
 }
 
-#main aside #enlaces a {
+#main aside #enlaces a, #main aside #ponencias a {
     padding: 5px;
     text-decoration: none;
     display:block;
     color: #333333;
 }
 
-#main aside #enlaces a:hover {
+#main aside #enlaces a:hover, #main aside #ponencias a:hover {
     color: #F8F8FF;
     background: #333333;
     background: rgba(0,0,0,0.75);
