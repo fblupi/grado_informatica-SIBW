@@ -1,0 +1,8 @@
+<div id="content">
+    <section>
+        <article> 
+            <h1>Wearables, por M. Cabrera</h1>
+            <p>Wearable hace referencia al conjunto de aparatos y dispositivos electrónicos que se incorporan en alguna parte de nuestro cuerpo interactuando continuamente con el usuario y con otros dispositivos con la finalidad de realizar alguna función específica, relojes inteligentes o smartwatchs, zapatillas de deportes con GPS incorporado y pulseras que monitorizan nuestro estado de salud son ejemplos entre otros de este tipo tecnología que se encuentra cada vez más presente en nuestras vidas.</p>
+        </article>
+    </section>
+</div> <!-- end content -->
