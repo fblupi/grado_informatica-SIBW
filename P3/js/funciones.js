@@ -57,9 +57,6 @@ function validar(nombreFormulario) {
         
     }
     
-    if (validado) {
-        alert("El formulario se ha enviado correctamente");        
-    }
     
     return validado;
 }

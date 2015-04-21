@@ -1,9 +1,11 @@
 <div id="ponencias">
     <h1>Ponencias relacionadas</h1>
-    <ul>
+    
     <?php
         switch($poncat){
             case 'ing-software':
+                echo '<h2>Ingeniería del software</h2>
+                        <ul>';
                 if($ponencia!='metod-agiles')
                     echo '<li><a href="index.php?cat=programa&poncat=ing-software&pon=metod-agiles">Metodologias ágiles</a></li>
                     ';               
@@ -15,6 +17,8 @@
                     ';
             break;
             case 'inf-grafica':
+                echo '<h2>Informática gráfica</h2>
+                        <ul>';
                 if($ponencia!='visu-realismo')
                     echo '<li><a href="index.php?cat=programa&poncat=inf-grafica&pon=visu-realismo">Visualizacion y realismo</a></li>
                     ';
