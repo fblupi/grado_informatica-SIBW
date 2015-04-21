@@ -12,18 +12,22 @@
                     }
                 }
                 $desp;
+                $altTitle;
                 switch($actividad){
                     case 'alhambra':
+                        $altTitle='Alhambra'; //Valor que tendra alt y tittle de las iamgenes
                         $desp=0;
                         break;
                     case 'sierra-nevada':
+                        $altTitle='Sierra Nevada';
                         $desp=7;
                         break;
                     default:
                         $desp=0;
                 }
 
-                $archivo=file_get_contents("contenido/actividades/actividades.txt");                
+                $archivo=file_get_contents("contenido/actividades/actividades.txt");
+                $archivo=utf8_encode($archivo);
                 $seccion = explode(";", $archivo); //Las secciones son separadas por ;                
                 $codigo = explode('=',$seccion[0+$desp]); //Seccion 0 tiene código
                 $titulo=explode('=',$seccion[1+$desp]); //Seccion 1 tiene título
@@ -34,14 +38,13 @@
                 echo '<div id="contenedor-slider-actividad">
                     <ul class="slider">';
                 $srcImg=explode('*',$imagen[1]);                    
-        echo '<li><img class="slider-actividad" id="active-slider-actividad" title="Alhambra" alt="alhambra" src="images/actividades/'.$srcImg[0].'"></li>';                                     inserta_lista('<li><img class="slider-actividad" title="Alhambra" alt="alhambra" src="images/actividades/','"></li>
-        ',$seccion,2+$desp,2,'*');
-                /*
-                for($i=2;$i<count($imagen);$i=$i+1){      
-                    $srcImg=explode('*',$imagen[$i]); 
-                    echo '<li><img class="slider-actividad" title="Alhambra" alt="alhambra" src="images/actividades/'.$srcImg[0].'"></li>
-                    ';                        
-                }*/
+                echo '<li><img class="slider-actividad" id="active-slider-actividad" title="'.$altTitle.'" alt="'.$altTitle.'" src="images/actividades/'.$srcImg[0].'"></li>';                                     
+
+                $parte1Img='<li><img class="slider-actividad" title="'.$altTitle.'" alt="'.$altTitle.'" src="images/actividades/'; //La primera parte de la imagen es distinta dependiendo de la imagen porque varía el alt y tittle.
+
+                inserta_lista($parte1Img,'"></li>
+                ',$seccion,2+$desp,2,'*');
+                
                 echo '</ul>                                                    
                 </div>
                 <script type="text/javascript">
@@ -81,7 +84,7 @@
                 
                 
             ?> 
-            <p class="go-back"><a href="actividades.html">Volver a actividades</a></p>
+            <p class="go-back"><a href="index.php?cat=actividades">Volver a actividades</a></p>
         </article>
     </section>
 </div> <!-- end content -->

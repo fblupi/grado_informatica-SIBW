@@ -21,7 +21,7 @@ FECHA=2 de Junio*
 HORA DE SALIDA=Hora de salida: 10:00 (Estación de Autobuses de Granada)*
 HORA DE VUELTA=Hora de vuelta: 18:00 (Punto de encuentro en la Alhambra)*;
 
-PRECIO=45€ (IVA incluído)*;
+PRECIO=45 Euros (IVA incluído)*;
 ##############################################################
 CODIGO=SIERRA-NEVADA;
 
@@ -46,4 +46,4 @@ FECHA=1 de Junio*
 HORA DE SALIDA=Hora de salida: 8:00 (ETSIIT)*
 HORA DE VUELTA=Hora de vuelta: 17:00 (Plaza de Pradollano)*;
 
-PRECIO=45€ (IVA incluído)*;
+PRECIO=45 Euros (IVA incluído)*;
