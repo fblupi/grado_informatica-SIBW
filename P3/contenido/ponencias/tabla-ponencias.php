@@ -46,9 +46,9 @@
                     </td>
                     <td>
                         <p class="title">Sistemas Complejos</p>
-                        <p><a href="#">Programación Paralela, por J.M. Mantas</a></p>
-                        <p><a href="#">Sistemas Distribuidos, por J.L. Garrido</a></p>
-                        <p><a href="#">Sistemas en Tiempo Real, por J.A. Holgado</a></p>
+                        <p><a href="index.php?cat=programa&poncat=sistemas-complejos&pon=programacion-paralela">Programación Paralela, por J.M. Mantas</a></p>
+                        <p><a href="index.php?cat=programa&poncat=sistemas-complejos&pon=sis-distribuidos">Sistemas Distribuidos, por J.L. Garrido</a></p>
+                        <p><a href="index.php?cat=programa&poncat=sistemas-complejos&pon=sis-tiempo-real">Sistemas en Tiempo Real, por J.A. Holgado</a></p>
                     </td>
                 </tr>
 
@@ -66,15 +66,15 @@
                     <td>15:00 - 17:00</td>
                     <td>
                         <p class="title">Bases de datos</p>
-                        <p><a href="#">Bases de Datos Multidimensionales, por E. Garví</a></p>
-                        <p><a href="#">Bases de Datos Orientadas a Objetos, por J. Samos</a></p>
-                        <p><a href="#">Bases de Datos Distribuidas, por C. Delgado</a></p>
+                        <p><a href="index.php?cat=programa&poncat=bd&pon=bd-multidim">Bases de Datos Multidimensionales, por E. Garví</a></p>
+                        <p><a href="index.php?cat=programa&poncat=bd&pon=bd-oo">Bases de Datos Orientadas a Objetos, por J. Samos</a></p>
+                        <p><a href="index.php?cat=programa&poncat=bd&pon=bd-distribuidas">Bases de Datos Distribuidas, por C. Delgado</a></p>
                     </td>
                     <td>
                         <p class="title">Interfaces de usuario</p>
-                        <p><a href="#">Interacción Háptica, por F. Soler</a></p>
-                        <p><a href="#">Wearables, por M. Cabrera</a></p>
-                        <p><a href="#">Realidad Virtual, por J. Flores</a></p>
+                        <p><a href="index.php?cat=programa&poncat=interfaz-usu&pon=interaccion-haptica">Interacción Háptica, por F. Soler</a></p>
+                        <p><a href="index.php?cat=programa&poncat=interfaz-usu&pon=wearables">Wearables, por M. Cabrera</a></p>
+                        <p><a href="index.php?cat=programa&poncat=interfaz-usu&pon=realidad-virtual">Realidad Virtual, por J. Flores</a></p>
                     </td>
                 </tr>
 
@@ -92,9 +92,9 @@
                     <td>17:30 - 19:30</td>
                     <td>
                         <p class="title">Compiladores</p>
-                        <p><a href="#">Procesadores de Lenguajes, por J. Revelles</a></p>
-                        <p><a href="#">Traductores, por R. López-Cózar</a></p>
-                        <p><a href="#">Procesamiento de Habla, por Z. Callejas</a></p>
+                        <p><a href="index.php?cat=programa&poncat=compiladores&pon=procesadores-lenguaje">Procesadores de Lenguajes, por J. Revelles</a></p>
+                        <p><a href="index.php?cat=programa&poncat=compiladores&pon=traductores">Traductores, por R. López-Cózar</a></p>
+                        <p><a href="index.php?cat=programa&poncat=compiladores&pon=procesamiento-habla">Procesamiento de Habla, por Z. Callejas</a></p>
                     </td>
                     <td>
                         <p class="title">Trabajos fin de grado</p>
