@@ -48,7 +48,7 @@
                 echo '</ul>                                                    
                 </div>
                 <script type="text/javascript">
-                    slide("slider-actividad","active-slider-actividad",2000);
+                    slide("slider-actividad","active-slider-actividad",4000);
                 </script>
                 <h2>Descripción</h2>
                 ';

@@ -8,7 +8,7 @@ IMAGEN3=alhambra3.jpg*
 IMAGEN4=alhambra4.jpg*
 IMAGEN5=alhambra5.jpg*;
 
-PARRAFO1=Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitectónicos más importantes de la Edad Media y máximo exponente del arte islámico en Occidente*
+PARRAFO1="Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitectónicos más importantes de la Edad Media y máximo exponente del arte islámico en Occidente".*
 PARRAFO2=La visita a la Alhambra, Patrimonio de la Humanidad por la UNESCO, es fundamental si va a pasar unos días en la ciudad.*
 PARRAFO2=En esta visita se contará con guías turísticos oficiales que le acompañarán recorriendo un sitio único en el mundo.*;
 
