@@ -3,31 +3,31 @@
     
     switch($categoria){
         case 'home':
-            include 'contenido/content-index.php';
+            include 'content-index.php';
             break;
         case 'programa':
-            include 'contenido/content-programa.php';
+            include 'content-programa.php';
             break;
         case 'actividades':
-            include 'contenido/content-actividades.php';
+            include 'content-actividades.php';
             break;
         case 'ciudad':
-            include 'contenido/content-ciudad.php';
+            include 'content-ciudad.php';
             break;
         case 'como-llegar':
-            include 'contenido/content-como-llegar.php';
+            include 'content-como-llegar.php';
             break;
         case 'patrocinadores':
-            include 'contenido/content-patrocinadores.php';
+            include 'content-patrocinadores.php';
             break;
         case 'inscripcion':
-            include 'contenido/content-inscripcion.php';
+            include 'content-inscripcion.php';
             break;
         case 'contacto':
-            include 'contenido/content-contacto.php';
+            include 'content-contacto.php';
             break;        
         default:
-            include 'contenido/content-index.php';
+            include 'content-index.php';
             break;
     }
 ?>
