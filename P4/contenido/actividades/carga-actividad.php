@@ -9,7 +9,7 @@
                     die('No se pudo abrir la base de datos.Error: '.mysql_error() );
                 }
 
-                $seleccion = "SELECT * FROM actividades WHERE Nombre_act='".$actividad."'";
+                $seleccion = "SELECT * FROM actividades WHERE ID_act='".$actividad."'";
                 $resultado = mysql_query ($seleccion, $conexion);
 
                 if($resultado){
@@ -40,19 +40,37 @@
                             echo '<h2>Fecha</h2>';
                             echo '<ul>';
                             echo '<li> Fecha: ' . date('d M Y',strtotime($fila['Fecha'])). '</li>';
-                            echo '<li> Hora salida: ' . date('h:m',strtotime($fila['Hora_salida'])) . '</li>';
+                            echo '<li> Hora salida: ' . date('G:m ',strtotime($fila['Hora_salida'])) . '</li>';
                             if ($fila['Hora_llegada'] != null)
-                                echo '<li> Hora llegada: ' . date('h:m',strtotime($fila['Hora_llegada'])) . '</li>';
+                                echo '<li> Hora llegada: ' . date('G:m ',strtotime($fila['Hora_llegada'])) . '</li>';
                             echo '</ul>';
 
                             //Precio
                             echo '<h2>Precio</h2>';
                             echo $fila['Precio'] . '€ (IVA Incluido)';
 
+                            //Boton apuntarse
+                            if(isset($_SESSION['usuario'])){
+                                $usuario=$_SESSION['usuario'];
+                                $comprueba_act="SELECT * FROM apuntados_actividad WHERE apuntados_actividad.email='".$usuario."' and apuntados_actividad.ID_act='".$actividad."'";
+                                $res=mysql_query($comprueba_act,$conexion);
+                                if(mysql_num_rows($res)>0){
+                                    echo  '<form class="contact_form" action="contenido/actividades/scriptDesapuntarse.php?act='.$actividad.'" method="post">';
+                                    echo   '    <input type="submit" value="Desapuntarse" name="desapuntarse" />';
+                                    echo  '</form>';
+                                }else{
+                                    echo  '<form action="contenido/actividades/scriptApuntarse.php?act='.$actividad.'" method="post">';
+                                    echo   '    <input type="submit" value="Apuntarse" name="apuntarse" />';
+                                    echo  '</form>';
+                                }
+
+                            }
+
+
                         }
                     }
                 }
-                
+                mysql_close($conexion);
             ?> 
             <p class="go-back"><a href="index.php?cat=actividades">Volver a actividades</a></p>
         </article>

@@ -25,7 +25,13 @@
             break;
         case 'contacto':
             include 'content-contacto.php';
-            break;        
+            break;
+        case 'usuario':
+            include 'content-usuario.php';
+            break;
+        case 'olvido-contra':
+            include 'content-olvido-contra.php';
+            break;
         default:
             include 'content-index.php';
             break;

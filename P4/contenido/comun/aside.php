@@ -1,13 +1,17 @@
 <aside>
     <?php
+        include 'contenido/contex-sesion.php';
+
         $categoria=isset($_GET['cat']) ? $_GET['cat'] : '';
         $poncat=isset($_GET['poncat']) ? $_GET['poncat'] : '';
         $ponencia=isset($_GET['pon']) ? $_GET['pon'] : '';
 
-        if($categoria=='programa' && $ponencia!=''){            
+        if($categoria=='programa' && $ponencia!=''){
             include 'contenido/contexmenu.php';
         }
+
     ?>
+
     <div id="fechas">
         <h1>Fechas importantes</h1>
         <ul>

@@ -23,7 +23,7 @@
                     for($i=0;$i<count($descripcion);$i=$i+1)
                         echo '<p>'.$descripcion[$i].'</p>';
                     
-                    echo '<p><a href="index.php?cat=actividades&act='.$fila['Nombre_act'].'">Leer más...</a></p>';
+                    echo '<p><a href="index.php?cat=actividades&act='.$fila['ID_act'].'">Leer más...</a></p>';
 
                     echo '</article>';
                 }
