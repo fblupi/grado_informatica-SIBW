@@ -55,13 +55,21 @@
                                 $comprueba_act="SELECT * FROM apuntados_actividad WHERE apuntados_actividad.email='".$usuario."' and apuntados_actividad.ID_act='".$actividad."'";
                                 $res=mysql_query($comprueba_act,$conexion);
                                 if(mysql_num_rows($res)>0){
-                                    echo  '<form class="contact_form" action="contenido/actividades/scriptDesapuntarse.php?act='.$actividad.'" method="post">';
-                                    echo   '    <input type="submit" value="Desapuntarse" name="desapuntarse" />';
-                                    echo  '</form>';
+                                    echo '<form class="contact_form" action="contenido/actividades/scriptDesapuntarse.php?act='.$actividad.'" method="post">';
+                                    echo '<ul>';
+                                    echo '    <li>';
+                                    echo '        <button class="submit" type="submit">Desapuntarse</button>';
+                                    echo '    </li>';
+                                    echo '</ul>';
+                                    echo '</form>';
                                 }else{
-                                    echo  '<form action="contenido/actividades/scriptApuntarse.php?act='.$actividad.'" method="post">';
-                                    echo   '    <input type="submit" value="Apuntarse" name="apuntarse" />';
-                                    echo  '</form>';
+                                    echo '<form class="contact_form" action="contenido/actividades/scriptApuntarse.php?act='.$actividad.'" method="post">';
+                                    echo '<ul>';
+                                    echo '    <li>';
+                                    echo '        <button class="submit" type="submit">Apuntarse</button>';
+                                    echo '    </li>';
+                                    echo '</ul>';
+
                                 }
 
                             }

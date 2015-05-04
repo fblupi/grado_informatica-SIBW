@@ -32,6 +32,9 @@
         case 'olvido-contra':
             include 'content-olvido-contra.php';
             break;
+        case 'ver-congresistas':
+            include 'content-congresistas.php';
+            break;
         default:
             include 'content-index.php';
             break;
