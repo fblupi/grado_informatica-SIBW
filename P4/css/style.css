@@ -550,6 +550,20 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #800000 inset;    
 }
 
+#login .contact_form input {
+    width: 180px;
+}
+
+#login .contact_form button {
+    margin-left: 0px;
+}
+
+#login a {
+    text-decoration: none;
+    color: #B92326;
+    padding-left: 12px;
+}
+
 /**************************************************************************/
 /* TABLA ******************************************************************/
 /**************************************************************************/
