@@ -11,7 +11,7 @@
                 </ul>
             </form>
         <?php   if($_SESSION['usuario']=='admin@admin.com') {
-                echo '<a href="index.php?cat=ver-congresistas">Ver congresistas.</a>';
+                echo '<a href="index.php?cat=ver-congresistas">Ver congresistas</a>';
             } ?>
     <?php }else{?>
         <h1>Iniciar Sesión</h1>
@@ -31,6 +31,17 @@
 
             </ul>
         </form>
+            <?php if(isset($_GET['login_error'])){
+                $error=$_GET['login_error'];
+                switch($error){
+                    case 'no-contra';
+                        echo '<div class="error"><p>La contraseña es incorrecta</p></div>';
+                        break;
+                    case 'no-email':
+                        echo '<div class="error"><p>El email es incorrecto</p></div>';
+                        break;
+                }
+            }?>
             <a href="index.php?cat=olvido-contra">Olvidé mi contraseña</a>
     <?php } ?>
 

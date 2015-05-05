@@ -3,7 +3,7 @@
 <?php if(isset($_SESSION['usuario'])){?>
     <h1>Panel de control</h1>
     <article>
-    <h2>Actividades</h2>
+    <h2>Mis actividades</h2>
     <?php
         include 'comun/conexionDB.php';
         $usuario=$_SESSION['usuario'];
@@ -14,12 +14,15 @@
         while($fila=mysql_fetch_array($resultado)){
             $select_actividad="SELECT ID_act,Titulo,Precio FROM actividades WHERE actividades.ID_act='".$fila['ID_act']."'";
             $res=mysql_query($select_actividad);
+            echo '<ul>';
             if($act=mysql_fetch_array($res)){
-                echo '<p><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a> '.$act['Precio'].'</p>';
+                echo '<li><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a> '.$act['Precio'].'€</li>';
                 $precio_total+=$act['Precio'];
             }
-
+            echo '</ul>';
         }
+
+        mysql_close($conexion);
 
         echo '<p><b>Total: </b>'.$precio_total.'€</p>';
 
@@ -46,6 +49,7 @@
                     </li>
                 </ul>
             </form>
+
             <?php if(isset($_GET['mod_error'])){
                 $error=$_GET['mod_error'];
                 switch($error){

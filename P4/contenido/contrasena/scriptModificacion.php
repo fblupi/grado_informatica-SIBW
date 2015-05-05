@@ -26,3 +26,5 @@
             header ('location: ../../index.php?cat=usuario&mod_error=antigua-match');
         }
     }
+
+    mysql_close($conexion);

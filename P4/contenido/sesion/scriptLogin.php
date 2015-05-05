@@ -10,14 +10,18 @@
         if($fila['Contrasena']==SHA1($contrasena)) {
             session_start();
             $_SESSION['usuario'] = $email;
-
+            $_SESSION['privilegio']=$fila['Tipo'];
+            mysql_close($conexion);
+            header('location:' . getenv('HTTP_REFERER'));
         }else{
-            echo 'alert("Contraseña incorrecta.");';
+            mysql_close($conexion);
+            header ('location: ../../index.php?cat=home&login_error=no-contra');
         }
     }else{
-        alert("Usuario no encontrado.");
+        mysql_close($conexion);
+        header ('location: ../../index.php?cat=home&login_error=no-email');
     }
-    mysql_close($conexion);
 
-    header('location:' . getenv('HTTP_REFERER'));
+
+
 ?>

@@ -2,11 +2,12 @@
     <section>
         <article>
 <?php
-    if($_SESSION['usuario']=='admin@admin.com'){ //¿Solo usuario administrado o uso columna tipo?
+    if($_SESSION['privilegio']==1){ //¿Solo usuario administrado o uso columna tipo?
+        include 'comun/conexionDB.php';
         if(isset($_GET['user'])){
             $email=$_GET['user'];
             echo '<h1>Datos de '.$email.'</h1>';
-            include 'comun/conexionDB.php';
+            //include 'comun/conexionDB.php';
 
             $seleccion="SELECT * FROM usuarios WHERE usuarios.email='".$email."'";
             $resultado=mysql_query($seleccion);
@@ -26,7 +27,7 @@
 
         }
         echo '<h1>Congresistas registrados</h1>';
-        include 'comun/conexionDB.php';
+
 
         $seleccion="SELECT email FROM usuarios WHERE usuarios.ID_cuota='congresista'";
         $resultado=mysql_query($seleccion);
@@ -38,6 +39,7 @@
             }
 
         }
+        mysql_close($conexion);
     }else{
         echo '<p>No tienes permiso para acceder a esta página';
     }

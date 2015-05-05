@@ -16,13 +16,13 @@
             $error=$_GET['olv_error'];
             switch($error){
                 case 'success':
-                    echo '<div id="success"> <p>Se le ha enviado un email con su contraseña</p></div>';
+                    echo '<div class="success"> <p>Se le ha enviado un email con su contraseña</p></div>';
                     break;
                 case 'mail':
-                    echo '<div id="error"> <p>Ha habido un problema al enviarle el correo pongase en contacto con el administrador.</p></div>';
+                    echo '<div class="error"> <p>Ha habido un problema al enviarle el correo pongase en contacto con el administrador.</p></div>';
                     break;
                 case 'no-user':
-                    echo '<div id="error"> <p>El usuario indicado no pertenece al sistema.</p></div>';
+                    echo '<div class="error"> <p>El usuario indicado no pertenece al sistema.</p></div>';
                     break;
             }
 

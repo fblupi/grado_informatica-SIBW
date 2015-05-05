@@ -56,19 +56,12 @@
                                 $res=mysql_query($comprueba_act,$conexion);
                                 if(mysql_num_rows($res)>0){
                                     echo '<form class="contact_form" action="contenido/actividades/scriptDesapuntarse.php?act='.$actividad.'" method="post">';
-                                    echo '<ul>';
-                                    echo '    <li>';
                                     echo '        <button class="submit" type="submit">Desapuntarse</button>';
-                                    echo '    </li>';
-                                    echo '</ul>';
                                     echo '</form>';
                                 }else{
                                     echo '<form class="contact_form" action="contenido/actividades/scriptApuntarse.php?act='.$actividad.'" method="post">';
-                                    echo '<ul>';
-                                    echo '    <li>';
                                     echo '        <button class="submit" type="submit">Apuntarse</button>';
-                                    echo '    </li>';
-                                    echo '</ul>';
+                                    echo '</form>';
 
                                 }
 

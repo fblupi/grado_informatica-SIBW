@@ -30,9 +30,9 @@
     mysql_close($conexion);
 
     if($resultado)
-        header('location: ../../index.php?cat=inscripcion&reg_error=false');
+        header('location: ../../index.php?cat=inscripcion&reg_error=success');
     else
-        header('location: ../../index.php?cat=inscripcion&reg_error=true');
+        header('location: ../../index.php?cat=inscripcion&reg_error=error');
 
 
 

@@ -49,10 +49,10 @@
         </form>
         <?php
         if(isset($_GET['reg_error'])){
-            if($_GET['reg_error']=='true'){
-                echo '<div id=reg_error> <p>Ha habido un error en el registro.</p> </div>';
+            if($_GET['reg_error']=='error'){
+                echo '<div class=error> <p>Ha habido un error en el registro.</p> </div>';
             }else{
-                echo '<div id=reg_exito> <p>Registro completado con éxito.</p> </div>';
+                echo '<div class=success><p>Registro completado con éxito.</p> </div>';
             }
 
         }
