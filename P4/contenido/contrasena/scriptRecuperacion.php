@@ -30,7 +30,7 @@
         if($res){
             // Completamos los datos
             $email=$usuario;
-            $asunto = "Recuperación de contraseña CEIIE";
+            $asunto = "[Mensaje de Web] Recuperación de contraseña CEIIE";
             $mensaje = "Hola ".$nombre.": <br/> Su antigua contraseña ha sido modificada. Su nueva contraseña es: ".$nuevaContrasena."<br/> Le recomendamos modificar esta contraseña en su panel de control." ;
 
             // Primer envío

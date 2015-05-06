@@ -62,6 +62,9 @@
                     case 'antigua-match':
                         echo '<div class="error"><p>Su contraseña no es correcta.</p></div>';
                         break;
+                    case 'mail':
+                        echo '<div class="error"><p>No se ha podido enviar el email.</p></div>';
+                        break;
                 }
 
 
