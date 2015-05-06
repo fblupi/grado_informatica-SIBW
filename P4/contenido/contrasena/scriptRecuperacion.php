@@ -64,6 +64,8 @@
         header('location: ../../index.php?cat=olvido-contra&olv_error=no-user');
     }
 
+    mysql_close($conexion);
+
 
 
     /*

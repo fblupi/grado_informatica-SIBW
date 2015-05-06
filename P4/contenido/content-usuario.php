@@ -63,7 +63,7 @@
                         echo '<div class="error"><p>Su contraseña no es correcta.</p></div>';
                         break;
                     case 'mail':
-                        echo '<div class="error"><p>No se ha podido enviar el email.</p></div>';
+                        echo '<div class="success"><p>Contraseña modificada con éxito, pero no se ha podido enviar el email.</p></div>';
                         break;
                 }
 

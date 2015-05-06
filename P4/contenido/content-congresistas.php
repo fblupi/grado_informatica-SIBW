@@ -29,13 +29,15 @@
         echo '<h1>Congresistas registrados</h1>';
 
 
-        $seleccion="SELECT email FROM usuarios WHERE usuarios.ID_cuota='congresista'";
+        $seleccion="SELECT * FROM usuarios";
         $resultado=mysql_query($seleccion);
         echo'<ul>';
         if(mysql_num_rows($resultado)>0){
             while($fila=mysql_fetch_array($resultado)){
                 $email=$fila['email'];
-                echo '<li><a href="index.php?cat=ver-congresistas&user='.$email.'">'.$email.'</a></li>';
+                $nombre=$fila['Nombre'];
+                $apellidos=$fila['Apellidos'];
+                echo '<li><a href="index.php?cat=ver-congresistas&user='.$email.'">'.$apellidos.', '.$nombre.'</a></li>';
             }
 
         }
