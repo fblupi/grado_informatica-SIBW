@@ -24,13 +24,38 @@
                 </li>
                 <li>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="turing@gmail.com" maxlength="40" required/>
+                    <input id="emailForm" type="email" name="email" placeholder="turing@gmail.com" maxlength="40" required/>
                 </li>
                 <li>
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" name="contrasena" required/>
+                    <label for="email">Confirmar email:</label>
+                    <input type="email" name="emailConfirm" placeholder="turing@gmail.com" maxlength="40" oninput="comprobarEmail(this)" required/>
                 </li>
-
+                <script type="text/javascript">
+                    function comprobarEmail (input) {
+                        if (input.value != document.getElementById('emailForm').value) {
+                            input.setCustomValidity('Los dos email deben coincidir.');
+                        } else {
+                            input.setCustomValidity('');
+                       }
+                    }
+                </script>
+                <li>
+                    <label for="contrasena">Contraseña:</label>
+                    <input id="contrasenaForm" type="password" name="contrasena" required/>
+                </li>
+                <li>
+                    <label for="contrasena">Confirmar contraseña:</label>
+                    <input type="password" name="contrasenaConfirm" oninput="comprobarContrasena(this)" required/>
+                </li>
+                <script type="text/javascript">
+                    function comprobarContrasena (input) {
+                        if (input.value != document.getElementById('contrasenaForm').value) {
+                            input.setCustomValidity('Las dos contraseñas deben coincidir.');
+                        } else {
+                            input.setCustomValidity('');
+                       }
+                    }
+                </script>
                 <li>
                     <label for="type">Cuota: </label>
                     <select name="cuota" required>

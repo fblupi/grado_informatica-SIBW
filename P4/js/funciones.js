@@ -25,7 +25,6 @@ function validar(nombreFormulario) {
         
         if (elemento.type === "text" || elemento.type === "textarea") { // Elemento de texto o área de texto
             if (elemento.value === "") { // Campo vacío
-                //alert("Debe rellenar el campo: " + elemento.name);
                 elemento.setAttribute("class", "error");
                 validado = false;
             } else {
@@ -35,7 +34,6 @@ function validar(nombreFormulario) {
             if (elemento.name === "telefono") { // Campo telefónico
                 regExp = /([0-9]{9})/;
                 if (!elemento.value.match(regExp)) { // Teléfono incorrecto
-                    //alert("Introduzca un telefono valido.");
                     elemento.setAttribute("class", "error");
                     validado = false;
                 } else {
@@ -47,7 +45,6 @@ function validar(nombreFormulario) {
         if (elemento.type === "email") { // Campo de email
             regExp = /([a-z\-_0-9]+@[a-z\-]*\.?[a-z]+\.[a-z\-]+)/;
             if (!elemento.value.match(regExp)) { // email incorrecto
-                //alert("Introduzca un email valido.");
                 elemento.setAttribute("class", "error");
                 validado = false;
             } else {
@@ -56,7 +53,6 @@ function validar(nombreFormulario) {
         }
         
     }
-    
     
     return validado;
 }
