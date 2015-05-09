@@ -25,7 +25,7 @@
                     $email=$usuario;
                     $nombre=$fila['Nombre'];
                     $asunto = "[Mensaje de Web] Modificación de contraseña CEIIE";
-                    $mensaje = "Hola:".$nombre." <br/> Su antigua contraseña ha sido modificada. Su nueva contraseña es: ".$nuevaContrasena ;
+                    $mensaje = "Hola, ".$nombre." <br/>Su antigua contraseña ha sido modificada. Su nueva contraseña es: ".$nuevaContrasena ;
                     // Envío
                     $mail = new PHPMailer(); // instancio un objeto de la clase PHPMailer
                     // para que funcionen caracteres de otros idiomas

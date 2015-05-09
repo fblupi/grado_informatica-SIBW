@@ -17,6 +17,8 @@
                 echo '<ul>';
                 echo '<li> Nombre: '.$fila['Nombre'].'</li>';
                 echo '<li> Apellidos: '.$fila['Apellidos'].'</li>';
+                if($fila['Centro']!=null)
+                    echo '<li>Centro de trabajo: '.$fila['Centro'].'</li>';
                 if($fila['Telefono']!=null)
                     echo '<li>Telefono: '.$fila['Telefono'].'</li>';
                 echo '<li> Cuota: '.$fila['ID_cuota'].'</li>';

@@ -50,25 +50,25 @@
                 </ul>
             </form>
 
-            <?php if(isset($_GET['mod_error'])){
-                $error=$_GET['mod_error'];
-                switch($error){
-                    case 'success':
-                        echo '<div class="success"><p>Contraseña modificada con éxito.</p></div>';
-                        break;
-                    case 'nueva-match':
-                        echo '<div class="error"><p>Las contraseñas no coinciden.</p></div>';
-                        break;
-                    case 'antigua-match':
-                        echo '<div class="error"><p>Su contraseña no es correcta.</p></div>';
-                        break;
-                    case 'mail':
-                        echo '<div class="success"><p>Contraseña modificada con éxito, pero no se ha podido enviar el email.</p></div>';
-                        break;
-                }
-
-
-            } ?>
+            <?php 
+                if(isset($_GET['mod_error'])){
+                    $error=$_GET['mod_error'];
+                    switch($error){
+                        case 'success':
+                            echo '<div class="success"><p>Contraseña modificada con éxito.</p></div>';
+                            break;
+                        case 'nueva-match':
+                            echo '<div class="error"><p>Las contraseñas no coinciden.</p></div>';
+                            break;
+                        case 'antigua-match':
+                            echo '<div class="error"><p>Su contraseña no es correcta.</p></div>';
+                            break;
+                        case 'mail':
+                            echo '<div class="success"><p>Contraseña modificada con éxito, pero no se ha podido enviar el email.</p></div>';
+                            break;
+                    }
+                } 
+            ?>
         </article>
 <?php }else{?>
     <p>No has iniciado sesión.</p>

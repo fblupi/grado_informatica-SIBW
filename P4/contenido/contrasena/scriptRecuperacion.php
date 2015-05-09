@@ -31,7 +31,7 @@
             // Completamos los datos
             $email=$usuario;
             $asunto = "[Mensaje de Web] Recuperación de contraseña CEIIE";
-            $mensaje = "Hola ".$nombre.": <br/> Su antigua contraseña ha sido modificada. Su nueva contraseña es: ".$nuevaContrasena."<br/> Le recomendamos modificar esta contraseña en su panel de control." ;
+            $mensaje = "Hola, ".$nombre.": <br/>Su antigua contraseña ha sido modificada. Su nueva contraseña es: ".$nuevaContrasena."<br/> Le recomendamos modificar esta contraseña en su panel de control." ;
 
             // Primer envío
             $mail = new PHPMailer(); // instancio un objeto de la clase PHPMailer

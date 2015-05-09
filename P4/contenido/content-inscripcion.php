@@ -16,7 +16,7 @@
                 </li>
                 <li>
                     <label for="name">Centro de trabajo:</label>
-                    <input type="text" name="centro" placeholder="Universidad de Granada" maxlength="20"/>
+                    <input type="text" name="centro" placeholder="UGR" maxlength="20"/>
                 </li>
                 <li>
                     <label for="subject">Teléfono:</label>
@@ -43,7 +43,6 @@
                                 echo'<option value="'.$fila["ID_cuota"].'">'.$fila["Nombre_cuota"].'</option>';
 
                         ?>
-
                     </select>
                 </li>
                 <li>
@@ -51,15 +50,21 @@
                 </li>
             </ul>
         </form>
-        <?php
-        if(isset($_GET['reg_error'])){
-            if($_GET['reg_error']=='error'){
-                echo '<div class=error> <p>Ha habido un error en el registro.</p> </div>';
-            }else{
-                echo '<div class=success><p>Registro completado con éxito.</p> </div>';
-            }
-
-        }
+        <?php        
+            if(isset($_GET['reg_error'])){
+                $error=$_GET['reg_error'];
+                switch($error){
+                    case 'success':
+                        echo '<div class="success"><p>Registro completado con éxito.</p></div>';
+                        break;
+                    case 'error':
+                        echo '<div class=error> <p>Ha habido un error en el registro.</p> </div>';
+                        break;
+                    case 'mail':
+                        echo '<div class="success"><p>Registro completado con éxito, pero no se ha podido enviar el email.</p></div>';
+                        break;
+                }
+            } 
         ?>
         <article>
             <h1>Lista de precios</h1>
@@ -70,7 +75,6 @@
                 while($fila=mysql_fetch_array($res))
                     echo '<li>'.$fila['Nombre_cuota'].': '.$fila['Precio'].'€ ('.$fila['Descripcion'].')</li>';
                 echo '</ul>';
-
             ?>
 
         </article>
