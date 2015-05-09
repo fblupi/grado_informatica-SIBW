@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!doctype html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <title>CEIIE 2015</title>

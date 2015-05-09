@@ -21,9 +21,9 @@
     </div>
     <div id="redes-sociales">
         <h1>Redes Sociales</h1>
-        <a id="btn-twitter" href="https://twitter.com/ceiieetsiit"target="_blank"><i class="fa fa-twitter-square"></i></a>
-        <a id="btn-facebook" href="https://www.facebook.com/profile.php?id=100009301161353"target="_blank"><i class="fa fa-facebook-square"></i></a>
-        <a id="btn-google" href="https://plus.google.com/u/0/118284246531701184750"target="_blank"><i class="fa fa-google-plus-square"></i></a>
+        <a id="btn-twitter" href="https://twitter.com/ceiieetsiit" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        <a id="btn-facebook" href="https://www.facebook.com/profile.php?id=100009301161353" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a id="btn-google" href="https://plus.google.com/u/0/118284246531701184750" target="_blank"><i class="fa fa-google-plus-square"></i></a>
     </div>
     <div id="enlaces">
         <h1>Enlaces Rápidos</h1>

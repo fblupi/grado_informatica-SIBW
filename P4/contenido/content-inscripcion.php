@@ -8,19 +8,23 @@
             <ul>
                 <li>
                     <label for="name">Nombre:</label>
-                    <input type="text" name="nombre" placeholder="Alan" required/>
+                    <input type="text" name="nombre" placeholder="Alan" maxlength="20" required/>
                 </li>
                 <li>
                     <label for="name">Apellidos:</label>
-                    <input type="text" name="apellidos" placeholder="Turing" required/>
+                    <input type="text" name="apellidos" placeholder="Turing" maxlength="20" required/>
+                </li>
+                <li>
+                    <label for="name">Centro de trabajo:</label>
+                    <input type="text" name="centro" placeholder="Universidad de Granada" maxlength="20"/>
                 </li>
                 <li>
                     <label for="subject">Teléfono:</label>
-                    <input type="text" name="telefono" placeholder="612345678"/>
+                    <input type="text" name="telefono" placeholder="612345678" maxlength="12"/>
                 </li>
                 <li>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="turing@gmail.com" required/>
+                    <input type="email" name="email" placeholder="turing@gmail.com" maxlength="40" required/>
                 </li>
                 <li>
                     <label for="contrasena">Contraseña:</label>
@@ -61,10 +65,10 @@
             <h1>Lista de precios</h1>
             <?php
                 echo '<ul>';
-                $selec_cuotas="SELECT Nombre_cuota,Precio FROM cuotas";
+                $selec_cuotas="SELECT Nombre_cuota, Precio, Descripcion FROM cuotas";
                 $res=mysql_query($selec_cuotas,$conexion);
                 while($fila=mysql_fetch_array($res))
-                    echo '<li>'.$fila['Nombre_cuota'].': '.$fila['Precio'].'€ </li>';
+                    echo '<li>'.$fila['Nombre_cuota'].': '.$fila['Precio'].'€ ('.$fila['Descripcion'].')</li>';
                 echo '</ul>';
 
             ?>

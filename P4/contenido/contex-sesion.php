@@ -19,7 +19,7 @@
             <ul>
                 <li>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" placeholder="Alan@turing.com" required/>
+                    <input type="email" name="email" placeholder="turing@gmail.com" required/>
                 </li>
                 <li>
                     <label for="contrasena">Contraseña:</label>

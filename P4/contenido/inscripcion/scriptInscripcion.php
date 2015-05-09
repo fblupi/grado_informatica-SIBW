@@ -14,11 +14,12 @@
     $email=$_POST['email'];
     $contrasena=$_POST['contrasena'];
     $cuota=$_POST['cuota'];
+    $cento=$_POST['centro'];
 
     echo 'Nombre: '.$nombre;
     echo 'email: '.$email;
 
-    $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0'); ";
+    $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
     //$insercion="INSERT INTO usuarios ('email', 'Nombre', 'Apellidos', 'Telefono', 'Contraseña', 'ID_cuota', 'Tipo') VALUES ('$email','$nombre','$apellidos','$telefono','SHA1($contrasena)','$cuota','0')";
     $resultado = mysql_query ($insercion, $conexion);
 
