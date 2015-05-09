@@ -63,7 +63,6 @@
                             include 'comun/conexionDB.php';
                             $seleccion="SELECT ID_cuota,Nombre_cuota FROM cuotas";
                             $resultado = mysql_query ($seleccion, $conexion);
-
                             while($fila=mysql_fetch_array($resultado))
                                 echo'<option value="'.$fila["ID_cuota"].'">'.$fila["Nombre_cuota"].'</option>';
 

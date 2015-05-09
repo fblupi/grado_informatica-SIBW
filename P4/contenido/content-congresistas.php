@@ -2,17 +2,18 @@
     <section>
         <article>
 <?php
-    if($_SESSION['privilegio']==1){ //¿Solo usuario administrado o uso columna tipo?
+    if($_SESSION['privilegio']==1){
         include 'comun/conexionDB.php';
         if(isset($_GET['user'])){
             $email=$_GET['user'];
             echo '<h1>Datos de '.$email.'</h1>';
-            //include 'comun/conexionDB.php';
 
             $seleccion="SELECT * FROM usuarios WHERE usuarios.email='".$email."'";
             $resultado=mysql_query($seleccion);
 
             if(mysql_num_rows($resultado)>0){
+                $seleccionActividades="SELECT Titulo FROM `actividades` JOIN `apuntados_actividad` ON (actividades.ID_act=apuntados_actividad.ID_act) WHERE email='".$email."'";
+                $resultadoActividades=mysql_query($seleccionActividades);
                 $fila=mysql_fetch_array($resultado);
                 echo '<ul>';
                 echo '<li> Nombre: '.$fila['Nombre'].'</li>';
@@ -22,6 +23,13 @@
                 if($fila['Telefono']!=null)
                     echo '<li>Telefono: '.$fila['Telefono'].'</li>';
                 echo '<li> Cuota: '.$fila['ID_cuota'].'</li>';
+                if(mysql_num_rows($resultadoActividades)>0) {
+                    echo '<li> Actividades:</li><ul>';
+                    while($filaActividad=mysql_fetch_array($resultadoActividades)) {
+                        echo '<li>'.$filaActividad['Titulo'].'</li>';
+                    }
+                    echo '</ul>';
+                }
                 echo '</ul>';
             }else{
                 echo '<p>No existe un usuario con ese email</p>';
@@ -50,6 +58,6 @@
 
 
 ?>
-</article>
+        </article>
     </section>
 </div> <!-- end content -->
