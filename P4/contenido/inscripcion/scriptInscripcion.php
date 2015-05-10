@@ -9,6 +9,7 @@
     $cuota=$_POST['cuota'];
     $cento=$_POST['centro'];
 
+    // ¿¿Para qué haces esto?? ¿¿Vestigios de la depuración??
     echo 'Nombre: '.$nombre;
     echo 'email: '.$email;
 
@@ -16,14 +17,12 @@
     $resultado = mysql_query ($insercion, $conexion);
     
     if($resultado) {
-        /*
-        if($cuota=='congresista' || $cuota=='profesor'){
-            $inserta__actividad="INSERT INTO apuntados_actividad (email,Nombre_act) VALUES ('$email','cena-gala')";
-            mysql_query($inserta__actividad,$conexion);
+        if($cuota=='Profesor'){ // Se incluye la cena de gala a los profesores
+            $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES ('$email','cena-gala')";
+            mysql_query($insercion,$conexion);
         }
-        */
         $actividades = $_POST['actividad'];
-        for($i=0; $i<count($actividades) && $resultado; $i++) {
+        for($i=0; $i<count($actividades) && $resultado; $i++) { // Se incluyen las actidades seleccionadas
             $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$actividades[$i]')";
             $resultado=mysql_query($insercion,$conexion);
         }

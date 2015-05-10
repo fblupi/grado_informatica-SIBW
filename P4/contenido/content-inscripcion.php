@@ -58,7 +58,7 @@
                 </script>
                 <li>
                     <label for="type">Cuota: </label>
-                    <select name="cuota" required>
+                    <select name="cuota" onchange="actualizarActividades (this)" required>
                         <?php
                             include 'comun/conexionDB.php';
                             $seleccion="SELECT ID_cuota,Nombre_cuota FROM cuotas";
@@ -67,6 +67,18 @@
                                 echo'<option value="'.$fila["ID_cuota"].'">'.$fila["Nombre_cuota"].'</option>';
 
                         ?>
+                        <script type="text/javascript">
+                            function actualizarActividades (select) {
+                                var input = document.getElementById ("cena-gala");
+                                if (select.value=="Profesor") {
+                                    input.disabled = true;
+                                    input.checked = true;
+                                } else {
+                                    input.disabled = false;
+                                    input.checked = false;
+                                }
+                            }
+                        </script>
                     </select>
                 </li>
                 <h2>Actividades</h2>
@@ -77,7 +89,7 @@
                     while($fila=mysql_fetch_array($resultado)) {
                         echo '<li>';
                         echo '<label for="'.$fila["ID_act"].'">'.$fila["Titulo"].'</label>';
-                        echo '<input type="checkbox" name="actividad[]" value="'.$fila["ID_act"].'"/>';
+                        echo '<input type="checkbox" id="'.$fila["ID_act"].'" name="actividad[]" value="'.$fila["ID_act"].'"/>';
                         echo '</li>';
                     }    
                 ?>
