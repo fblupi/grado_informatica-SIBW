@@ -14,10 +14,19 @@
 
     $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
     $resultado = mysql_query ($insercion, $conexion);
-
-    if($cuota=='congresista' || $cuota=='profesor'){
-        $inserta__actividad="INSERT INTO apuntados_actividad (email,Nombre_act) VALUES ('$email','cena-gala')";
-        mysql_query($inserta__actividad,$conexion);
+    
+    if($resultado) {
+        /*
+        if($cuota=='congresista' || $cuota=='profesor'){
+            $inserta__actividad="INSERT INTO apuntados_actividad (email,Nombre_act) VALUES ('$email','cena-gala')";
+            mysql_query($inserta__actividad,$conexion);
+        }
+        */
+        $actividades = $_POST['actividad'];
+        for($i=0; $i<count($actividades) && $resultado; $i++) {
+            $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$actividades[$i]')";
+            $resultado=mysql_query($insercion,$conexion);
+        }
     }
 
     mysql_close($conexion);
@@ -28,7 +37,24 @@
         require_once('../../php/PHPMailer/class.phpmailer.php');
         require_once('../../php/PHPMailer/class.smtp.php');
         $asunto = "[Mensaje de Web] Inscripción CEIIE";
-        $mensaje = "Hola, ".$nombre."<br/>Acaba de ser inscrito en el I Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) como ".$cuota.".<br/>" ;
+        $mensaje = "Hola, $nombre<br/>Acaba de ser inscrito en el I Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) como $cuota.<br/>" ;
+        $actividades = $_POST['actividad'];
+        /* ¡¡NO FUNCIONA!! :((
+        if(!empty($actividades)) {
+            $mensaje = $mensaje."Está inscrito a las siguientes actividades:<br/><ul>"; 
+            for($i=0; $i<count($actividades); $i++) {
+                $mensaje = $mensaje."<li>";
+                
+                $seleccion="SELECT Titulo FROM actividades WHERE ID_act='$actividades[$i]'";
+                $resultado=mysql_query($seleccion,$conexion);
+                $fila=mysql_fetch_array($resultado);
+                
+                $mensaje = $mensaje.$fila["Titulo"];
+                $mensaje = $mensaje."</li>";
+            }
+            $mensaje = $mensaje."</ul>";
+        }
+        */
         // Envío
         $mail = new PHPMailer(); // instancio un objeto de la clase PHPMailer
         // para que funcionen caracteres de otros idiomas

@@ -69,6 +69,18 @@
                         ?>
                     </select>
                 </li>
+                <h2>Actividades</h2>
+                <?php
+                    include 'comun/conexionDB.php';
+                    $seleccion="SELECT ID_act,Titulo FROM actividades";
+                    $resultado=mysql_query ($seleccion, $conexion);
+                    while($fila=mysql_fetch_array($resultado)) {
+                        echo '<li>';
+                        echo '<label for="'.$fila["ID_act"].'">'.$fila["Titulo"].'</label>';
+                        echo '<input type="checkbox" name="actividad[]" value="'.$fila["ID_act"].'"/>';
+                        echo '</li>';
+                    }    
+                ?>
                 <li>
                     <button class="submit" type="submit">Enviar</button>
                 </li>
