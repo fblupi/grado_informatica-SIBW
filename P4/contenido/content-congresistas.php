@@ -12,7 +12,7 @@
             $resultado=mysql_query($seleccion);
 
             if(mysql_num_rows($resultado)>0){
-                $seleccionActividades="SELECT Titulo FROM `actividades` JOIN `apuntados_actividad` ON (actividades.ID_act=apuntados_actividad.ID_act) WHERE email='".$email."'";
+                $seleccionActividades="SELECT Titulo FROM actividades, apuntados_actividad WHERE actividades.ID_act=apuntados_actividad.ID_act AND email='".$email."'";
                 $resultadoActividades=mysql_query($seleccionActividades);
                 $fila=mysql_fetch_array($resultado);
                 echo '<ul>';

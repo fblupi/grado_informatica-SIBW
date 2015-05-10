@@ -504,6 +504,10 @@ footer > #copyright {
     font-family: Pier, sans-serif;
 }
 
+.contact_form input[type="checkbox"]{
+  width: 10px;
+}
+
 .contact_form select {
     height: 32px;
     width: 240px;
