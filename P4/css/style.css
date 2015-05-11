@@ -504,10 +504,6 @@ footer > #copyright {
     font-family: Pier, sans-serif;
 }
 
-.contact_form input[type="checkbox"]{
-  width: 10px;
-}
-
 .contact_form select {
     height: 32px;
     width: 240px;
@@ -540,7 +536,7 @@ footer > #copyright {
 }
 
 button.submit {
-    font-family: Pier;
+    font-family: Pier, sans-serif;
     background-color: #B92326;
     border: 1px solid #800000;
     border-bottom: 1px solid #800000;
@@ -588,6 +584,10 @@ button.submit:active {
 
 .success p {
     color: #008000;
+}
+
+.contact_form input[type="checkbox"]{
+    width: 20px;
 }
 
 /**************************************************************************/
@@ -657,8 +657,3 @@ table>tbody>tr>td a {
 table>tbody>tr>td a:visited {
     color: #A52A2A;
 }
-
-
-/****
-LOGIN
-*****/

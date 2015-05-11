@@ -25,7 +25,7 @@
             $select_actividad="SELECT ID_act,Titulo,Precio FROM actividades WHERE actividades.ID_act='".$fila['ID_act']."'";
             $res=mysql_query($select_actividad);
             if($act=mysql_fetch_array($res)){
-                echo '<li><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a> '.$act['Precio'].'€</li>';
+                echo '<li><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a>: '.$act['Precio'].'€</li>';
                 $precio_total+=$act['Precio'];
             }
         }
