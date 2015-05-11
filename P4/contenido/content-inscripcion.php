@@ -30,15 +30,7 @@
                     <label for="email">Confirmar email:</label>
                     <input type="email" name="emailConfirm" placeholder="turing@gmail.com" maxlength="40" oninput="comprobarEmail(this)" required/>
                 </li>
-                <script type="text/javascript">
-                    function comprobarEmail (input) {
-                        if (input.value != document.getElementById('emailForm').value) {
-                            input.setCustomValidity('Los dos email deben coincidir.');
-                        } else {
-                            input.setCustomValidity('');
-                       }
-                    }
-                </script>
+                
                 <li>
                     <label for="contrasena">Contraseña:</label>
                     <input id="contrasenaForm" type="password" name="contrasena" required/>
@@ -47,15 +39,7 @@
                     <label for="contrasena">Confirmar contraseña:</label>
                     <input type="password" name="contrasenaConfirm" oninput="comprobarContrasena(this)" required/>
                 </li>
-                <script type="text/javascript">
-                    function comprobarContrasena (input) {
-                        if (input.value != document.getElementById('contrasenaForm').value) {
-                            input.setCustomValidity('Las dos contraseñas deben coincidir.');
-                        } else {
-                            input.setCustomValidity('');
-                       }
-                    }
-                </script>
+                
                 <li>
                     <label for="type">Cuota: </label>
                     <select name="cuota" onchange="actualizarActividades (this)" required>
@@ -67,18 +51,6 @@
                                 echo'<option value="'.$fila["ID_cuota"].'">'.$fila["Nombre_cuota"].'</option>';
 
                         ?>
-                        <script type="text/javascript">
-                            function actualizarActividades (select) {
-                                var input = document.getElementById ("cena-gala");
-                                if (select.value=="Profesor") {
-                                    input.disabled = true;
-                                    input.checked = true;
-                                } else {
-                                    input.disabled = false;
-                                    input.checked = false;
-                                }
-                            }
-                        </script>
                     </select>
                 </li>
                 <h2>Actividades</h2>

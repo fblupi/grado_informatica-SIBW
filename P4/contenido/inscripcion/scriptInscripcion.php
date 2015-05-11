@@ -7,11 +7,7 @@
     $email=$_POST['email'];
     $contrasena=$_POST['contrasena'];
     $cuota=$_POST['cuota'];
-    $cento=$_POST['centro'];
-
-    // ¿¿Para qué haces esto?? ¿¿Vestigios de la depuración??
-    echo 'Nombre: '.$nombre;
-    echo 'email: '.$email;
+    $centro=$_POST['centro'];
 
     $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
     $resultado = mysql_query ($insercion, $conexion);
@@ -28,7 +24,7 @@
         }
     }
 
-    mysql_close($conexion);
+    
 
     if($resultado) {
         // Enviar correo
@@ -37,23 +33,23 @@
         require_once('../../php/PHPMailer/class.smtp.php');
         $asunto = "[Mensaje de Web] Inscripción CEIIE";
         $mensaje = "Hola, $nombre<br/>Acaba de ser inscrito en el I Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) como $cuota.<br/>" ;
+        
         $actividades = $_POST['actividad'];
-        /* ¡¡NO FUNCIONA!! :((
         if(!empty($actividades)) {
             $mensaje = $mensaje."Está inscrito a las siguientes actividades:<br/><ul>"; 
             for($i=0; $i<count($actividades); $i++) {
                 $mensaje = $mensaje."<li>";
-                
-                $seleccion="SELECT Titulo FROM actividades WHERE ID_act='$actividades[$i]'";
-                $resultado=mysql_query($seleccion,$conexion);
+                $select="SELECT Titulo FROM actividades WHERE ID_act='".$actividades[$i]."'";
+                $resultado=mysql_query($select,$conexion);
                 $fila=mysql_fetch_array($resultado);
-                
-                $mensaje = $mensaje.$fila["Titulo"];
+                $mensaje = $mensaje.$fila['Titulo'];
                 $mensaje = $mensaje."</li>";
             }
             $mensaje = $mensaje."</ul>";
         }
-        */
+        
+        mysql_close($conexion);
+        
         // Envío
         $mail = new PHPMailer(); // instancio un objeto de la clase PHPMailer
         // para que funcionen caracteres de otros idiomas

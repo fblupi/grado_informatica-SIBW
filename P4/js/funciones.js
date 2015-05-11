@@ -56,3 +56,30 @@ function validar(nombreFormulario) {
     
     return validado;
 }
+
+function comprobarEmail (input) {
+    if (input.value != document.getElementById('emailForm').value) {
+        input.setCustomValidity('Los dos email deben coincidir.');
+    } else {
+        input.setCustomValidity('');
+   }
+}
+
+function comprobarContrasena (input) {
+    if (input.value != document.getElementById('contrasenaForm').value) {
+        input.setCustomValidity('Las dos contraseñas deben coincidir.');
+    } else {
+        input.setCustomValidity('');
+   }
+}
+
+function actualizarActividades (select) {
+    var input = document.getElementById ("cena-gala");
+    if (select.value=="Profesor") {
+        input.disabled = true;
+        input.checked = true;
+    } else {
+        input.disabled = false;
+        input.checked = false;
+    }
+}
