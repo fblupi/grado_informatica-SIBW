@@ -35,6 +35,15 @@
         case 'ver-congresistas':
             include 'content-congresistas.php';
             break;
+        case 'opciones-admin':
+            include 'content-opciones-admin.php';
+            break;
+        case 'editar-cuota':
+            include 'content-editar-cuota.php';
+            break;
+        case 'editar-act':
+            include 'content-editar-actividad.php';
+            break;
         default:
             include 'content-index.php';
             break;

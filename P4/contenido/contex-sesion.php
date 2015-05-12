@@ -10,8 +10,8 @@
                     </li>
                 </ul>
             </form>
-        <?php   if($_SESSION['usuario']=='admin@admin.com') {
-                echo '<a href="index.php?cat=ver-congresistas">Ver congresistas</a>';
+        <?php   if($_SESSION['privilegio']==1) {
+                echo '<a href="index.php?cat=opciones-admin">Opciones de administrador</a>';
             } ?>
     <?php }else{?>
         <h1>Iniciar Sesión</h1>

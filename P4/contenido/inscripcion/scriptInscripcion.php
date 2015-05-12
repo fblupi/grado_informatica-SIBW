@@ -13,10 +13,12 @@
     $resultado = mysql_query ($insercion, $conexion);
     
     if($resultado) {
+        /*
         if($cuota=='Profesor'){ // Se incluye la cena de gala a los profesores
-            $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES ('$email','cena-gala')";
+            //$insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES ('$email','cena-gala')";
             mysql_query($insercion,$conexion);
         }
+        */
         $actividades = $_POST['actividad'];
         for($i=0; $i<count($actividades) && $resultado; $i++) { // Se incluyen las actidades seleccionadas
             $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$actividades[$i]')";

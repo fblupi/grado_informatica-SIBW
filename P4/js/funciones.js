@@ -76,7 +76,7 @@ function comprobarContrasena (input) {
 function actualizarActividades (select) {
     var input = document.getElementById ("cena-gala");
     if (select.value=="Profesor") {
-        input.disabled = true;
+        input.readonly = true;
         input.checked = true;
     } else {
         input.disabled = false;
