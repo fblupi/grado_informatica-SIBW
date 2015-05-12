@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <label for="subject">Teléfono:</label>
-                    <input type="text" name="telefono" placeholder="612345678" maxlength="12"/>
+                    <input type="tel" pattern="[0-9]{9}" name="telefono" placeholder="612345678" maxlength="12"/>
                 </li>
                 <li>
                     <label for="email">Email:</label>
