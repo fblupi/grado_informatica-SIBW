@@ -13,7 +13,7 @@ $foto_src=$_POST['foto_src'];
 $foto_alt=$_POST['foto_alt'];
 $foto_title=$_POST['foto_title'];
 
-
+echo $detalles;
 
 $resultado=mysql_query("UPDATE actividades SET Titulo='$titulo', Detalles='$detalles', Fecha='$fecha', Hora_salida='$hora_salida', Hora_llegada='$hora_llegada', Foto_src='$foto_src', Foto_alt='$foto_alt', Foto_title='$foto_title', Descripcion='$descripcion',Precio='$precio' WHERE ID_act='$id'");
 
@@ -21,7 +21,7 @@ $resultado=mysql_query("UPDATE actividades SET Titulo='$titulo', Detalles='$deta
 mysql_close($conexion);
 
 if($resultado) {
-    header('location: ../../index.php?cat=opciones-admin');
+    header('location: ../../index.php?cat=opciones-admin&mod=success');
 }else{
     header('location: ../../index.php?cat=opciones-admin&mod=error');
 }

@@ -25,13 +25,13 @@
 
                             //Descripcion
                             echo '<h2>Descripción</h2>';
-                            $descripcion = explode(';', utf8_encode($fila['Descripcion']));
+                            $descripcion = explode(';', $fila['Descripcion']);
                             for ($i = 0; $i < count($descripcion); $i = $i + 1)
                                 echo '<p>' . $descripcion[$i] . '</p>';
 
                             //Detalles
                             echo '<h2>Detalles</h2>';
-                            $detalles = explode(';', utf8_encode($fila['Detalles']));
+                            $detalles = explode(';', $fila['Detalles']);
                             echo '<ul>';
                             for ($i = 0; $i < count($detalles); $i = $i + 1)
                                 echo '<li>' . $detalles[$i] . '</li>';

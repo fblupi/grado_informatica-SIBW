@@ -14,7 +14,7 @@ $resultado=mysql_query("UPDATE cuotas SET Descripcion='$descripcion',Precio='$pr
 mysql_close($conexion);
 
 if($resultado) {
-    header('location: ../../index.php?cat=opciones-admin');
+    header('location: ../../index.php?cat=opciones-admin$mod=success');
 }else{
     header('location: ../../index.php?cat=opciones-admin&mod=error');
 }

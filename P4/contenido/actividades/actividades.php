@@ -18,7 +18,7 @@
                     echo '<article>';
                     echo '  <h1>'.$fila['Titulo'].'</h1>';
                     echo '   <img title="'.$fila['Foto_title'].'" alt="'.$fila['Foto_alt'].'"src="'.$fila['Foto_src'].'"/>';
-                    $descripcion=explode(';',utf8_encode($fila['Descripcion']));
+                    $descripcion=explode(';',$fila['Descripcion']);
 
                     for($i=0;$i<count($descripcion);$i=$i+1)
                         echo '<p>'.$descripcion[$i].'</p>';

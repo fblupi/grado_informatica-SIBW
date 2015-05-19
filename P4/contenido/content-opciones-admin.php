@@ -24,6 +24,20 @@
 
                 mysql_close($conexion);
 
+                if(isset($_GET['mod'])){
+                    $error=$_GET['mod'];
+                    switch($error){
+                        case 'success':
+                            echo '<div class="success"><p>Modificación realizada con éxito.</p></div>';
+                            break;
+                        case 'error':
+                            echo '<div class=error> <p>Ha habido un error en la modificación.</p> </div>';
+                            break;
+
+                    }
+                }
+
+
             }?>
         </article>
     </section>

@@ -43,11 +43,11 @@
                         </li>
                         <li>
                             <label for="descripcion">Descripción:</label>
-                            <textarea type="textarea" name="descripcion" cols="40" rows="6" required><?php echo utf8_encode($fila['Descripcion']); ?></textarea>
+                            <textarea type="textarea" name="descripcion" cols="40" rows="6" required><?php echo $fila['Descripcion']; ?></textarea>
                         </li>
                         <li>
                             <label for="detalles">Detalles:</label>
-                            <textarea type="textarea" name="detalles" cols="40" rows="6" required><?php echo utf8_encode($fila['Detalles']); ?></textarea>
+                            <textarea type="textarea" name="detalles" cols="40" rows="6" required><?php echo $fila['Detalles']; ?></textarea>
                         </li>
                         <li>
                             <label for="foto_src">Foto src:</label>
