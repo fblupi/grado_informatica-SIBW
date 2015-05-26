@@ -6,15 +6,13 @@
     <?php
         include 'comun/conexionDB.php';
         $usuario=$_SESSION['usuario'];
-        $precio_total=0;
         // Cálculo de tipo de congresista
         echo '<h2>Tipo de congresista</h2>';
-        $seleccion="SELECT Nombre_cuota, Precio FROM cuotas, usuarios WHERE usuarios.email='$usuario' AND usuarios.ID_Cuota=cuotas.ID_Cuota";
+        $seleccion="SELECT Nombre_cuota FROM cuotas, usuarios WHERE usuarios.email='$usuario' AND usuarios.ID_Cuota=cuotas.ID_Cuota";
         $resultado=mysql_query($seleccion,$conexion);
         $fila=mysql_fetch_array($resultado);
-        $precio_total+=$fila['Precio'];
         echo '<ul>';
-        echo '<li>'.$fila['Nombre_cuota'].': '.$fila['Precio']. '€</li>';
+        echo '<li>'.$fila['Nombre_cuota'].'</li>';
         echo '</ul>';
         // Cálculo de actividades
         echo '<h2>Mis actividades</h2>';
@@ -22,18 +20,15 @@
         $seleccion="SELECT * FROM apuntados_actividad WHERE apuntados_actividad.email='$usuario'";
         $resultado=mysql_query($seleccion,$conexion);
         while($fila=mysql_fetch_array($resultado)){
-            $select_actividad="SELECT ID_act,Titulo,Precio FROM actividades WHERE actividades.ID_act='".$fila['ID_act']."'";
+            $select_actividad="SELECT ID_act,Titulo FROM actividades WHERE actividades.ID_act='".$fila['ID_act']."'";
             $res=mysql_query($select_actividad);
             if($act=mysql_fetch_array($res)){
-                echo '<li><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a>: '.$act['Precio'].'€</li>';
-                $precio_total+=$act['Precio'];
+                echo '<li><a href="index.php?cat=actividades&act='.$act['ID_act'].'">'.$act['Titulo'].'</a></li>';
             }
         }
         echo '</ul>';
-        // Precio total
-        mysql_close($conexion);
-        echo '<p><b>Total: </b>'.$precio_total.'€</p>';
-        echo '</article>'; ?>
+        echo '</article>';
+        mysql_close($conexion); ?>
 
         <article>
             <h2>Modificacion de contraseña</h2>
