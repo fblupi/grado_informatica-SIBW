@@ -3,16 +3,16 @@
         <?php if(isset($_SESSION['usuario'])) {?>
             <p>Debes cerrar sesión para poder inscribirte.</p>
         <?php }else{ ?>
-        <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form">
+        <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form" onsubmit="return fechasValidas ();">
             <h1>Búsqueda de hoteles</h1>
             <ul>
                 <li>
                     <label for="llegada">Fecha llegada</label>
-                    <input type="date" name="llegada" required/>
+                    <input id="fechaLlegada" type="date" name="llegada" required/>
                 </li>
                 <li>
-                    <label for="llegada">Fecha llegada</label>
-                    <input type="date" name="salida" required/>
+                    <label for="salida">Fecha salida</label>
+                    <input id="fechaSalida" type="date" name="salida" required/>
                 </li>
                 <li>
                     <button class="submit" type="submit">Buscar hoteles</button>

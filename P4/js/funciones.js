@@ -84,3 +84,16 @@ function actualizarActividades (select) {
         input.checked = false;
     }
 }
+
+function fechasValidas () {
+    var fechaLlegada = document.getElementById('fechaLlegada'),
+        fechaSalida = document.getElementById('fechaSalida'),
+        validado = true;
+    
+    if (fechaLlegada.value >= fechaSalida.value) {
+        validado = false;
+        alert("Las fechas no son correctas");
+    }
+    
+    return validado;
+}
