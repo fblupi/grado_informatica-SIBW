@@ -97,3 +97,29 @@ function fechasValidas () {
     
     return validado;
 }
+
+function validaHoteles(){
+    var hoteles = document.getElementsByClassName("hotelCheck");
+    var cont=0;
+
+    var hotel;
+
+    for( hotel in hoteles){
+        if(hoteles[hotel].checked){
+            cont++;
+        }
+
+    }
+
+    var valido=true;
+
+    if(cont<1){
+        alert("Debe seleccionar un hotel");
+        valido=false;
+    }else if(cont>1){
+        alert("Debe selecioccionar solo un hotel");
+        valido=false;
+    }
+
+    return valido;
+}

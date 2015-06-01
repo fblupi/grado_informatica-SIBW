@@ -20,7 +20,7 @@
             </ul>
         </form>
 
-        <form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" method="post" name="inscripcion_form" >
+        <form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" onsubmit="return validaHoteles();" method="post" name="inscripcion_form" >
             <?php if(isset($_POST['llegada']) && isset($_POST['salida'])){
                 $llegada=$_POST['llegada'];
                 $salida=$_POST['salida'];
@@ -35,7 +35,8 @@
                 echo '<ul>';
                 foreach($hoteles as $hotel){
                     echo '<li> <h3>Hotel: '.$hotel[0].'</h3><p>Descripción: '.$hotel[2].'</p></li>';
-                    echo '<input type="checkbox" name="hotel" value="'.$hotel[1].'">Reservar una habitacion de este hotel </input>';
+
+                    echo '<label><input type="checkbox" class="hotelCheck" name="hotel" value="'.$hotel[1].'"/>Reservar una habitacion de este hotel </label>';
                     //Obtenemos las habitaciones disponibles
                     $habitaciones=getHabitaciones($hotel[1],$llegada,$salida);
                     echo '<select name="habitaciones[]" required>';
