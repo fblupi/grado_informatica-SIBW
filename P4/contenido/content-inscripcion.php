@@ -3,25 +3,10 @@
         <?php if(isset($_SESSION['usuario'])) {?>
             <p>Debes cerrar sesión para poder inscribirte.</p>
         <?php }else{ ?>
-        <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form" onsubmit="return fechasValidas ();">
-            <h1>Búsqueda de hoteles</h1>
-            <ul>
-                <li>
-                    <label for="llegada">Fecha llegada</label>
-                    <input id="fechaLlegada" type="date" name="llegada" required/>
-                </li>
-                <li>
-                    <label for="salida">Fecha salida</label>
-                    <input id="fechaSalida" type="date" name="salida" required/>
-                </li>
-                <li>
-                    <button class="submit" type="submit">Buscar hoteles</button>
-                </li>
-            </ul>
-        </form>
 
-        <form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" onsubmit="return validaHoteles();" method="post" name="inscripcion_form" >
             <?php if(isset($_POST['llegada']) && isset($_POST['salida'])){
+                echo '<form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" onsubmit="return validaHoteles();" method="post" name="inscripcion_form" >';
+                echo '<h1>Hoteles</h1>';
                 $llegada=$_POST['llegada'];
                 $salida=$_POST['salida'];
 
@@ -36,7 +21,8 @@
                 foreach($hoteles as $hotel){
                     echo '<li> <h3>Hotel: '.$hotel[0].'</h3><p>Descripción: '.$hotel[2].'</p></li>';
 
-                    echo '<label><input type="checkbox" class="hotelCheck" name="hotel" value="'.$hotel[1].'"/>Reservar una habitacion de este hotel </label>';
+                    echo '<label for="'.$hotel[1].'">Reservar una habitacion de este hotel </label>';
+                    echo '<input type="checkbox" class="hotelCheck" name="hotel" id="'.$hotel[1].'" value="'.$hotel[1].'"/>';
                     //Obtenemos las habitaciones disponibles
                     $habitaciones=getHabitaciones($hotel[1],$llegada,$salida);
                     echo '<select name="habitaciones[]" required>';
@@ -48,7 +34,27 @@
 
                 }
                 echo '</ul>';
-            } ?>
+            }else{
+            ?>
+            <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form" onsubmit="return fechasValidas ();">
+                <h1>Búsqueda de hoteles</h1>
+                <ul>
+                    <li>
+                        <label for="llegada">Fecha llegada</label>
+                        <input id="fechaLlegada" type="date" name="llegada" required/>
+                    </li>
+                    <li>
+                        <label for="salida">Fecha salida</label>
+                        <input id="fechaSalida" type="date" name="salida" required/>
+                    </li>
+                    <li>
+                        <button class="submit" type="submit">Buscar hoteles</button>
+                    </li>
+                </ul>
+            </form>
+
+            <form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" method="post" name="inscripcion_form" >
+            <?php } ?>
             <h1>Formulario de Inscripción</h1>
             <ul>
                 <li>
