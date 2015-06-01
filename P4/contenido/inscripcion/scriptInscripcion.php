@@ -9,6 +9,25 @@
     $cuota=$_POST['cuota'];
     $centro=$_POST['centro'];
 
+    if(isset($_POST['habitaciones'])){
+        require '../../php/apiConnect.php';
+
+        $llegada=$_POST['llegada'];
+        $salida=$_POST['salida'];
+        $habitaciones=$_POST['habitaciones'];
+
+        $habitacion;
+        foreach($habitaciones as $hab){
+            if($hab!='NO')
+                $habitacion=$hab;
+        }
+
+        $hotel=$_POST['hotel'];
+
+        setReserva($hotel,$habitacion,$llegada,$salida);
+
+    }
+
     $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
     $resultado = mysql_query ($insercion, $conexion);
     
@@ -76,5 +95,6 @@
             header ('location: ../../index.php?cat=inscripcion&reg_error=mail');
         }
     } else
+
         header('location: ../../index.php?cat=inscripcion&reg_error=error');
 ?>

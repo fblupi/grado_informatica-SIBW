@@ -3,7 +3,51 @@
         <?php if(isset($_SESSION['usuario'])) {?>
             <p>Debes cerrar sesión para poder inscribirte.</p>
         <?php }else{ ?>
+        <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form">
+            <h1>Búsqueda de hoteles</h1>
+            <ul>
+                <li>
+                    <label for="llegada">Fecha llegada</label>
+                    <input type="date" name="llegada" required/>
+                </li>
+                <li>
+                    <label for="llegada">Fecha llegada</label>
+                    <input type="date" name="salida" required/>
+                </li>
+                <li>
+                    <button class="submit" type="submit">Buscar hoteles</button>
+                </li>
+            </ul>
+        </form>
+
         <form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" method="post" name="inscripcion_form" >
+            <?php if(isset($_POST['llegada']) && isset($_POST['salida'])){
+                $llegada=$_POST['llegada'];
+                $salida=$_POST['salida'];
+
+                echo '<input type="hidden" name="llegada" value="'.$llegada.'"/>';
+                echo '<input type="hidden" name="salida" value="'.$salida.'"/>';
+                require '/php/apiConnect.php';
+                $hoteles = getHoteles();
+
+
+
+                echo '<ul>';
+                foreach($hoteles as $hotel){
+                    echo '<li> <h3>Hotel: '.$hotel[0].'</h3><p>Descripción: '.$hotel[2].'</p></li>';
+                    echo '<input type="checkbox" name="hotel" value="'.$hotel[1].'">Reservar una habitacion de este hotel </input>';
+                    //Obtenemos las habitaciones disponibles
+                    $habitaciones=getHabitaciones($hotel[1],$llegada,$salida);
+                    echo '<select name="habitaciones[]" required>';
+                    echo '<option value="NO"> -- </option>';
+                    foreach($habitaciones as $habitacion){
+                        echo '<option value="'.$habitacion[0].'">'.$habitacion[1].'('.$habitacion[4].' €)</option>';
+                    }
+                    echo '</select>';
+
+                }
+                echo '</ul>';
+            } ?>
             <h1>Formulario de Inscripción</h1>
             <ul>
                 <li>
