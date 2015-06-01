@@ -54,11 +54,7 @@
                                 $usuario=$_SESSION['usuario'];
                                 $comprueba_act="SELECT * FROM apuntados_actividad WHERE apuntados_actividad.email='".$usuario."' and apuntados_actividad.ID_act='".$actividad."'";
                                 $res=mysql_query($comprueba_act,$conexion);
-                                if(mysql_num_rows($res)>0){
-                                    echo '<form class="contact_form" action="contenido/actividades/scriptDesapuntarse.php?act='.$actividad.'" method="post">';
-                                    echo '        <button class="submit" type="submit">Desapuntarse</button>';
-                                    echo '</form>';
-                                }else{
+                                if(mysql_num_rows($res)==0){
                                     echo '<form class="contact_form" action="contenido/actividades/scriptApuntarse.php?act='.$actividad.'" method="post">';
                                     echo '        <button class="submit" type="submit">Apuntarse</button>';
                                     echo '</form>';

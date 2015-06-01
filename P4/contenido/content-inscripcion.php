@@ -5,6 +5,7 @@
         <?php }else{ ?>
 
             <?php if(isset($_POST['llegada']) && isset($_POST['salida'])){
+                //Esta es la parte donde se muestran los hoteles. Solo se muestran si se ha indicado unas fechas.
                 echo '<form class="contact_form" action="contenido/inscripcion/scriptInscripcion.php" onsubmit="return validaHoteles();" method="post" name="inscripcion_form" >';
                 echo '<h1>Hoteles</h1>';
                 $llegada=$_POST['llegada'];
@@ -34,7 +35,7 @@
 
                 }
                 echo '</ul>';
-            }else{
+            }else{ //El buscado solo se muestra si no hay fechas. El segundo form es por si no se indican fechas, que no haga la validacion de los hoteles.
             ?>
             <form class="contact_form" action="index.php?cat=inscripcion" method="post" name="hoteles_form" onsubmit="return fechasValidas ();">
                 <h1>Búsqueda de hoteles</h1>
