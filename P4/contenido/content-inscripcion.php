@@ -22,11 +22,11 @@
                 foreach($hoteles as $hotel){
                     echo '<li> <h3>Hotel: '.$hotel[0].'</h3><p>Descripción: '.$hotel[2].'</p></li>';
 
-                    echo '<label for="'.$hotel[1].'">Reservar una habitacion de este hotel </label>';
+                    echo '<label for="'.$hotel[1].'">Reservar habitación </label>';
                     echo '<input type="checkbox" class="hotelCheck" name="hotel" id="'.$hotel[1].'" value="'.$hotel[1].'"/>';
                     //Obtenemos las habitaciones disponibles
                     $habitaciones=getHabitaciones($hotel[1],$llegada,$salida);
-                    echo '<select name="habitaciones[]" required>';
+                    echo '<select class="habitacionesSelect" name="habitaciones[]" required>';
                     echo '<option value="NO"> -- </option>';
                     foreach($habitaciones as $habitacion){
                         echo '<option value="'.$habitacion[0].'">'.$habitacion[1].'('.$habitacion[4].' €)</option>';

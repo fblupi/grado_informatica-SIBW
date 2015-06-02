@@ -104,8 +104,8 @@ function validaHoteles(){
 
     var hotel;
 
-    for( hotel in hoteles){
-        if(hoteles[hotel].checked){
+    for(var i=0;i<hoteles.length;i++){
+        if(hoteles[i].checked){
             cont++;
         }
 
@@ -120,6 +120,26 @@ function validaHoteles(){
         alert("Debe selecioccionar solo un hotel");
         valido=false;
     }
+
+    //Comprobamos las habitaciones
+    var habitaciones = document.getElementsByClassName("habitacionesSelect");
+    cont=0;
+    
+    for(i=0;i<habitaciones.length;i++){
+        var habitacion = habitaciones[i];
+        if(habitacion.options[habitacion.selectedIndex].value !== "NO"){
+            cont++;
+        }
+    }
+
+    if(cont<1){
+        alert("Debe seleccionar una habitación");
+        valido=false;
+    }else if(cont>1){
+        alert("Debe selecioccionar solo una habitación");
+        valido=false;
+    }
+
 
     return valido;
 }
