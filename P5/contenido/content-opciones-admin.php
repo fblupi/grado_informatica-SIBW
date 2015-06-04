@@ -4,7 +4,7 @@
             <?php
             if($_SESSION['privilegio']==1) {
                 echo '<h1>Panel de control de administrador</h1>';
-                echo '<a href="index.php?cat=ver-congresistas">Ver congresistas </a>';
+                echo '<a href="index.php?cat=ver-congresistas">Buscar congresistas </a>';
                 echo '<h2>Editar cuotas</h2>';
                 include 'comun/conexionDB.php';
                 $resultado=mysql_query("SELECT ID_cuota,Nombre_cuota FROM cuotas ");

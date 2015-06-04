@@ -36,9 +36,8 @@
             }
 
         }
+        /*
         echo '<h1>Congresistas registrados</h1>';
-
-
         $seleccion="SELECT * FROM usuarios";
         $resultado=mysql_query($seleccion);
         echo'<ul>';
@@ -51,13 +50,52 @@
             }
 
         }
+        */
         mysql_close($conexion);
     }else{
         echo '<p>No tienes permiso para acceder a esta página';
     }
-
-
 ?>
+            <form class="contact_form">
+            <h1>Buscar congresistas</h1>
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" onkeyup="buscarCongresistas();">
+                    </li>
+                    <li>
+                        <label for="apellidos">Apellidos: </label>
+                        <input type="text" id="apellidos" name="apellidos" onkeyup="buscarCongresistas();">
+                    </li>
+                    <li>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" onkeyup="buscarCongresistas();">
+                    </li>
+                    <li>
+                        <label for="telefono">Teléfono: </label>
+                        <input type="tel" id="telefono" name="telefono" onkeyup="buscarCongresistas();">
+                    </li>
+                    <li>
+                        <label for="centro">Centro: </label>
+                        <input type="text" id="centro" name="centro" onkeyup="buscarCongresistas();">
+                    </li>
+                    <li>
+                        <label for="cuota">Cuota: </label>
+                        <select id="cuota" name="cuota" onchange="buscarCongresistas();">
+                            <option value=""></option>
+                            <?php
+                                include 'comun/conexionDB.php';
+                                $seleccion="SELECT ID_cuota, Nombre_cuota FROM cuotas";
+                                $resultado = mysql_query ($seleccion, $conexion);
+                                while($fila=mysql_fetch_array($resultado))
+                                    echo'<option value="'.$fila["ID_cuota"].'">'.$fila["Nombre_cuota"].'</option>';
+                            ?>
+                        </select>
+                    </li>
+                </ul>
+            </form>
+            <h1>Resultados de búsqueda</h1>
+            <div id="congresistas"></div>
         </article>
     </section>
 </div> <!-- end content -->
