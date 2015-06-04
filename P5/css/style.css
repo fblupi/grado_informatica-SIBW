@@ -231,12 +231,6 @@ b {
     margin-top: 12px;
 }
 
-.pic-actividad {
-    height: 50px;
-    width: 50px;
-    padding-left: 20px;
-}
-
 /* Patrocinadores *********************************************************/
 
 .patrocinador {   
@@ -428,6 +422,7 @@ ul.slider-patro{
 }
 
 /*Patrocinadores **********************************************************/
+
 #imagen-patrocinador{
     display: block;
     margin: auto;
@@ -482,6 +477,18 @@ footer > #copyright {
 /**************************************************************************/
 /* FORMULARIO DE CONTACTO *************************************************/
 /**************************************************************************/
+
+.pic-actividad {
+    height: 50px;
+    width: 50px;
+    padding-left: 120px;
+}
+
+.actividades-form div {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
 
 .actividades-form input[type="checkbox"] {
     height: 50px;

@@ -33,6 +33,25 @@ function actualizarActividades () {
     ajax.send(null);
 }
 
+function actualizarFoto (actividad) {
+    var divResultado = document.getElementById('divpic-' + actividad);
+    
+    if (divResultado.innerHTML != "") { // Div no vacío
+        divResultado.innerHTML = "";
+    } else {
+        var ajax = objetoAjax();
+        
+        ajax.open("GET", "ajax/actualizarFoto.php?actividad="+actividad, true);
+        
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                divResultado.innerHTML = ajax.responseText;
+            }
+        };
+        ajax.send(null);
+    }
+}
+
 function buscarCongresistas () {
     var divResultado = document.getElementById('congresistas'),
         nombre = document.getElementById('nombre').value,
