@@ -95,7 +95,6 @@
                 <li>
                     <label for="type">Cuota: </label>
                     <select id="cuota" name="cuota" onchange="actualizarActividades(this)" required>
-                        <option value=""></value>
                         <?php
                             include 'comun/conexionDB.php';
                             $seleccion="SELECT ID_cuota,Nombre_cuota FROM cuotas";
@@ -108,7 +107,7 @@
                 </li>
                 
                 <h2>Actividades</h2>
-                <div id="actividadesIns"></div>
+                <div id="actividadesIns"><li>Seleccionar una cuota</li></div>
                 <?php
                     /*
                     include 'comun/conexionDB.php';
