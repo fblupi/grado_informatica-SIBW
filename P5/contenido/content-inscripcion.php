@@ -94,7 +94,8 @@
                 
                 <li>
                     <label for="type">Cuota: </label>
-                    <select id="cuota" name="cuota" onchange="actualizarActividades()" required>
+                    <select id="cuota" name="cuota" onchange="actualizarActividades(this)" required>
+                        <option value=""></value>
                         <?php
                             include 'comun/conexionDB.php';
                             $seleccion="SELECT ID_cuota,Nombre_cuota FROM cuotas";
@@ -105,10 +106,11 @@
                         ?>
                     </select>
                 </li>
+                
                 <h2>Actividades</h2>
                 <div id="actividadesIns"></div>
                 <?php
-                /*
+                    /*
                     include 'comun/conexionDB.php';
                     $seleccion="SELECT ID_act,Titulo FROM actividades";
                     $resultado=mysql_query ($seleccion, $conexion);
@@ -117,8 +119,8 @@
                         echo '<label for="'.$fila["ID_act"].'">'.$fila["Titulo"].'</label>';
                         echo '<input type="checkbox" id="'.$fila["ID_act"].'" name="actividad[]" value="'.$fila["ID_act"].'"/>';
                         echo '</li>';
-                    }
-                */
+                    }    
+                    */
                 ?>
                 <li>
                     <button class="submit" type="submit">Enviar</button>

@@ -73,16 +73,24 @@ function comprobarContrasena (input) {
    }
 }
 
+function marcar (checkbox) {
+    alert("Hola " + checkbox);
+    var input = document.getElementById(checkbox);
+    input.disabled = true;
+    input.checked = true;
+}
+
+function desmarcar (checkbox) {
+    var input = document.getElementById(checkbox);
+    input.disabled = false;
+    input.checked = false;
+}
 /*
 function actualizarActividades (select) {
-    var input = document.getElementById ("cena-gala");
-
     if (select.value=="Profesor") {
-        input.disabled = true;
-        input.checked = true;
+        marcar("cena-gala");
     } else {
-        input.disabled = false;
-        input.checked = false;
+        desmarcar("cena-gala");
     }
 }
 */

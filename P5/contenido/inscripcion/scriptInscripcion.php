@@ -29,23 +29,26 @@
     }
 
     $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
-    $resultado = mysql_query ($insercion, $conexion);
+    $resultado=mysql_query ($insercion, $conexion);
     
     if($resultado) {
-        /*
-        if($cuota=='Profesor'){ // Se incluye la cena de gala a los profesores
-            //$insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES ('$email','cena-gala')";
-            mysql_query($insercion,$conexion);
+        // Se incluyen las actividades por defecto de una cuota
+        $selectActividadesPorDefecto="SELECT ID_act FROM cuota_actividad WHERE ID_cuota='$cuota'";
+        $resultadoActividadesPorDefecto=mysql_query($selectActividadesPorDefecto, $conexion);
+        if(mysql_num_rows($resultadoActividadesPorDefecto)>0) {
+            while($actividadPorDefecto=mysql_fetch_array($resultadoActividadesPorDefecto)) {
+                $idActividadPorDefecto=$actividadPorDefecto['ID_act'];
+                $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$idActividadPorDefecto')";
+                $resultado=mysql_query($insercion,$conexion);
+            }
         }
-        */
+        // Se incluyen las actidades seleccionadas
         $actividades = $_POST['actividad'];
-        for($i=0; $i<count($actividades) && $resultado; $i++) { // Se incluyen las actidades seleccionadas
+        for($i=0; $i<count($actividades) && $resultado; $i++) { 
             $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$actividades[$i]')";
             $resultado=mysql_query($insercion,$conexion);
         }
     }
-
-    
 
     if($resultado) {
         // Enviar correo
@@ -55,14 +58,17 @@
         $asunto = "[Mensaje de Web] Inscripción CEIIE";
         $mensaje = "Hola, $nombre<br/>Acaba de ser inscrito en el I Congreso de Estudiantes de Ingeniería Informática de España (CEIIE) como $cuota.<br/>" ;
         
-        $actividades = $_POST['actividad'];
-        if(!empty($actividades)) {
-            $mensaje = $mensaje."Está inscrito a las siguientes actividades:<br/><ul>"; 
-            for($i=0; $i<count($actividades); $i++) {
+        // Se incluyen las actidades seleccionadas
+        $actividades = "SELECT ID_act FROM apuntados_actividad WHERE email='$email'";
+        $resultado = mysql_query($actividades, $conexion);
+        if(mysql_num_rows($resultado)>0) {
+            $mensaje = $mensaje."Está inscrito a las siguientes actividades:<br/><ul>";
+            while($actividad=mysql_fetch_array($resultado)) {
+                $idActividad = $actividad['ID_act'];
                 $mensaje = $mensaje."<li>";
-                $select="SELECT Titulo FROM actividades WHERE ID_act='".$actividades[$i]."'";
-                $resultado=mysql_query($select,$conexion);
-                $fila=mysql_fetch_array($resultado);
+                $select = "SELECT Titulo FROM actividades WHERE ID_act='$idActividad'";
+                $resultadoSelect = mysql_query($select,$conexion);
+                $fila = mysql_fetch_array($resultadoSelect);
                 $mensaje = $mensaje.$fila['Titulo'];
                 $mensaje = $mensaje."</li>";
             }
@@ -94,7 +100,5 @@
         }else{
             header ('location: ../../index.php?cat=inscripcion&reg_error=mail');
         }
-    } else
-
-        header('location: ../../index.php?cat=inscripcion&reg_error=error');
+    } else header('location: ../../index.php?cat=inscripcion&reg_error=error');
 ?>
