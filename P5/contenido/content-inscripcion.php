@@ -121,6 +121,7 @@
                     }    
                     */
                 ?>
+                <div><p>Precio final: <span id="precio">0</span>€</p></div>
                 <li>
                     <button class="submit" type="submit">Enviar</button>
                 </li>

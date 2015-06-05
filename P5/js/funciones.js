@@ -152,3 +152,11 @@ function validaHoteles(){
 
     return valido;
 }
+
+function sumarPrecio(precio){
+    var spanPrecio = document.getElementById('precio');
+    var precioActual = parseInt(spanPrecio.innerHTML);
+
+    alert('Precio actual: '+precioActual+'Precio act: '+precio);
+    spanPrecio.innerHTML=precioActual+precio;
+}
