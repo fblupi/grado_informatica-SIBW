@@ -154,9 +154,29 @@ function validaHoteles(){
 }
 
 function sumarPrecio(precio){
-    var spanPrecio = document.getElementById('precio');
+    var spanPrecio = document.getElementById('precioFinal');
     var precioActual = parseInt(spanPrecio.innerHTML);
 
     alert('Precio actual: '+precioActual+'Precio act: '+precio);
     spanPrecio.innerHTML=precioActual+precio;
+}
+
+function actualizarPrecioTotal(){
+
+    var spanPrecioHotel = document.getElementById('precioHotel'),
+        spanPrecioCuota = document.getElementById('precioCuota'),
+        spanPrecioActividades = document.getElementById('precioActividades'),
+        spanPrecioFinal = document.getElementById('precioFinal');
+
+    var precioTotal=0;
+
+    if(spanPrecioHotel.innerHTML!=="No se ha reservado ningún hotel"){
+        precioTotal+=parseInt(spanPrecioHotel.innerHTML);
+    }
+    precioTotal+=parseInt(spanPrecioCuota.innerHTML);
+    precioTotal+=parseInt(spanPrecioActividades.innerHTML);
+
+    spanPrecioFinal.innerHTML=precioTotal;
+
+
 }

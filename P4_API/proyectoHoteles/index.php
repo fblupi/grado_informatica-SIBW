@@ -161,6 +161,37 @@ $app->get('/habitacion/:codigoHotel',function($codigoHotel){
     }
 });
 
+$app->get('/habitacion/precio/:codigoHabitacion',function($codigoHabitacion){
+
+    $app = \Slim\Slim::getInstance();
+
+    try
+    {
+        $db = getConnection();
+
+        $sth = $db->prepare("SELECT precioHabitacion FROM hotel.Habitacion WHERE hotel.habitacion.numHabitacion=:codigoHabitacion");
+
+        $sth->bindParam(':codigoHabitacion', $codigoHabitacion, PDO::PARAM_INT);
+
+        $sth->execute();
+
+        $habitacion = $sth->fetchAll();
+
+        if($habitacion) {
+            $app->response->setStatus(200);
+            $app->response()->headers->set('Content-Type', 'application/json');
+            echo json_encode($habitacion);
+            $db = null;
+        } else {
+            throw new PDOException('No records found.');
+        }
+
+    } catch(PDOException $e) {
+        $app->response()->setStatus(404);
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+});
+
 $app->get('/habitacion/:codigoHotel/:llegada/:salida',function($codigoHotel,$llegada,$salida){
 
     $app = \Slim\Slim::getInstance();

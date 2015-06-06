@@ -34,19 +34,21 @@ function cambiarActividades(){
 }
 
 function cambiarPrecioCuota(){
-    var spanPrecio = document.getElementById('precio'),
+    var spanPrecioCuota = document.getElementById('precioCuota'),
         cuota = document.getElementById("cuota").value;
 
     var ajax = objetoAjax();
 
-    ajax.open("GET", "ajax/obtenerPrecioCuota.php?cuota="+cuota, true);
+    ajax.open("GET", "ajax/obtenerPrecioCuota.php?cuota="+cuota, false);
 
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4) {
-            spanPrecio.innerHTML = ajax.responseText;
+            spanPrecioCuota.innerHTML = ajax.responseText;
         }
     };
     ajax.send(null);
+
+    actualizarPrecioTotal();
 
 }
 
@@ -59,24 +61,26 @@ function actualizarActividades () {
 
 
 function cambiarPrecio(actividad,accion){
-    var spanPrecio = document.getElementById('precio');
+    var spanPrecioActividades = document.getElementById('precioActividades');
     var idActividad = actividad;
 
     var ajax = objetoAjax();
 
-    ajax.open("GET", "ajax/obtenerPrecioActividad.php?actividad="+idActividad, true);
+    ajax.open("GET", "ajax/obtenerPrecioActividad.php?actividad="+idActividad, false);
 
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4) {
             if(accion=="sumar"){
-                spanPrecio.innerHTML = parseInt(spanPrecio.innerHTML)+parseInt(ajax.responseText);
+                spanPrecioActividades.innerHTML = parseInt(spanPrecioActividades.innerHTML)+parseInt(ajax.responseText);
             }else{
-                spanPrecio.innerHTML = parseInt(spanPrecio.innerHTML)-parseInt(ajax.responseText);
+                spanPrecioActividades.innerHTML = parseInt(spanPrecioActividades.innerHTML)-parseInt(ajax.responseText);
             }
 
         }
     };
     ajax.send(null);
+
+    actualizarPrecioTotal();
 }
 
 function cambiarImagen(actividad){
@@ -88,7 +92,7 @@ function cambiarImagen(actividad){
     } else {
         var ajax = objetoAjax();
 
-        ajax.open("GET", "ajax/actualizarFoto.php?actividad="+actividad, true);
+        ajax.open("GET", "ajax/actualizarFoto.php?actividad="+actividad, false);
 
         ajax.onreadystatechange = function() {
             if (ajax.readyState == 4) {
@@ -109,6 +113,27 @@ function actualizarFoto (inputActividad) {
     }
     cambiarImagen(actividad);
     cambiarPrecio(actividad,accion);
+}
+
+function cambiarPrecioHabitacion(selectHabitacion){
+    var spanPrecioHotel = document.getElementById('precioHotel');
+    var habitacion=selectHabitacion.value;
+
+    if(selectHabitacion.value!=="NO"){
+        var ajax = objetoAjax();
+
+        ajax.open("GET", "ajax/obtenerPrecioHabitacion.php?habitacion="+habitacion, false);
+
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                spanPrecioHotel.innerHTML = ajax.responseText;
+            }
+        };
+        ajax.send(null);
+    }else{
+        spanPrecioHotel.innerHTML="No se ha reservado ningún hotel";
+    }
+    actualizarPrecioTotal();
 }
 
 function buscarCongresistas () {

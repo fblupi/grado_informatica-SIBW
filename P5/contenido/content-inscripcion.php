@@ -26,7 +26,7 @@
                     echo '<input type="checkbox" class="hotelCheck" name="hotel" id="'.$hotel[1].'" value="'.$hotel[1].'"/>';
                     //Obtenemos las habitaciones disponibles
                     $habitaciones=getHabitaciones($hotel[1],$llegada,$salida);
-                    echo '<select class="habitacionesSelect" name="habitaciones[]" required>';
+                    echo '<select class="habitacionesSelect" name="habitaciones[]" onchange="cambiarPrecioHabitacion(this)" required>';
                     echo '<option value="NO"> -- </option>';
                     foreach($habitaciones as $habitacion){
                         echo '<option value="'.$habitacion[0].'">'.$habitacion[1].'('.$habitacion[4].' €)</option>';
@@ -121,7 +121,10 @@
                     }    
                     */
                 ?>
-                <div><p>Precio final: <span id="precio">0</span>€</p></div>
+                <div><p>Precio hotel: <span id="precioHotel">No se ha reservado ningún hotel</span></p></div>
+                <div><p>Precio cuota: <span id="precioCuota">0</span>€</p></div>
+                <div><p>Precio actividades:<span id="precioActividades">0</span>€</p></div>
+                <div><p><b>Precio final: <span id="precioFinal">0</span>€</p></b></div>
                 <li>
                     <button class="submit" type="submit">Enviar</button>
                 </li>
