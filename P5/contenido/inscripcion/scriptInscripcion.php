@@ -9,24 +9,6 @@
     $cuota=$_POST['cuota'];
     $centro=$_POST['centro'];
 
-    if(isset($_POST['habitaciones'])){
-        require '../../php/apiConnect.php';
-
-        $llegada=$_POST['llegada'];
-        $salida=$_POST['salida'];
-        $habitaciones=$_POST['habitaciones'];
-
-        $habitacion;
-        foreach($habitaciones as $hab){
-            if($hab!='NO')
-                $habitacion=$hab;
-        }
-
-        $hotel=$_POST['hotel'];
-
-        setReserva($hotel,$habitacion,$llegada,$salida);
-
-    }
 
     $insercion="INSERT INTO usuarios (email, Nombre, Apellidos, Telefono, Contrasena, ID_cuota, Tipo, Centro) VALUES ('$email', '$nombre', '$apellidos', '$telefono', SHA1('$contrasena'), '$cuota', '0', '$centro'); ";
     $resultado=mysql_query ($insercion, $conexion);
@@ -48,6 +30,30 @@
             $insercion="INSERT INTO apuntados_actividad (email,ID_act) VALUES('$email','$actividades[$i]')";
             $resultado=mysql_query($insercion,$conexion);
         }
+
+    }
+
+    if(isset($_POST['habitaciones'])){
+        require '../../php/apiConnect.php';
+
+        $llegada=$_POST['llegada'];
+        $salida=$_POST['salida'];
+        $habitaciones=$_POST['habitaciones'];
+
+        $habitacion;
+        foreach($habitaciones as $hab){
+            if($hab!='NO')
+                $habitacion=$hab;
+        }
+
+        $hotel='00'.$_POST['hotel']; //Para que coincida con el codigoHotel de la API.
+
+        setReserva($hotel,$habitacion,$llegada,$salida);
+
+        $insercionReserva="INSERT INTO reservas (email,hotel,habitacion,llegada,salida) VALUES('$email','$hotel','$habitacion','$llegada','$salida')";
+        $resultadoReserva=mysql_query($insercionReserva,$conexion);
+
+
     }
 
     if($resultado) {

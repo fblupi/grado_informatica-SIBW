@@ -94,7 +94,7 @@ $app->get('/img/:codigoHotel',function($codigoHotel){
 
 //Indicamos que si nos llega un parámetro /hotel/:nombreHotel por GET, nos devuelva todos los datos de ese hotel
 //La consulta sería http://localhost/ejemplo/hotel?nombreHotel=Senator Granada Spa (Se pueden incluir espacios) 
-$app->get('/hotel/:nombreHotel',function($nombreHotel){
+$app->get('/hotel/:codigoHotel',function($codigoHotel){
    	
    	$app = \Slim\Slim::getInstance();
 
@@ -102,9 +102,9 @@ $app->get('/hotel/:nombreHotel',function($nombreHotel){
     {
         $db = getConnection();
  
-        $sth = $db->prepare("SELECT * FROM hotel.Hotel WHERE Hotel.nombreHotel=:nombreHotel");
+        $sth = $db->prepare("SELECT * FROM hotel.Hotel WHERE Hotel.codigoHotel=:codigoHotel");
  		
- 		$sth->bindParam(':nombreHotel', $nombreHotel, PDO::PARAM_INT);
+ 		$sth->bindParam(':codigoHotel', $codigoHotel, PDO::PARAM_INT);
 
         $sth->execute();
  

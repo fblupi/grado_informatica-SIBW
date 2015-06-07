@@ -27,6 +27,24 @@
             }
         }
         echo '</ul>';
+
+        //Comprobamos si hay reservas
+        $seleccion="SELECT * FROM reservas WHERE email='$usuario'";
+        $resultado=mysql_query($seleccion,$conexion);
+
+        if(mysql_num_rows($resultado)>0){
+            $fila=mysql_fetch_array($resultado);
+
+            echo '<h2>Mis reservas</h2>';
+
+            include 'php/apiConnect.php';
+
+            $hotel=getInfoHotel($fila['hotel']);
+
+            echo '<p>Hotel: '.$hotel['nombreHotel'].'</p><p> Habitacion: '.$fila['habitacion'].' </p><p>Llegada: '.$fila['llegada'].'</p><p>Salida: '.$fila['salida'].'</p>';
+
+        }
+
         echo '</article>';
         mysql_close($conexion); ?>
 

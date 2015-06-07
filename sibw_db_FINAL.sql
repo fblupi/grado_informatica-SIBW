@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2015 a las 17:37:20
+-- Tiempo de generación: 07-06-2015 a las 13:12:46
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -39,18 +39,19 @@ CREATE TABLE IF NOT EXISTS `actividades` (
   `Foto_src` varchar(256) NOT NULL,
   `Foto_title` varchar(32) NOT NULL,
   `Foto_alt` varchar(32) NOT NULL,
-  `Precio` float NOT NULL
+  `Precio` float NOT NULL,
+  `Minifoto_src` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `actividades`
 --
 
-INSERT INTO `actividades` (`ID_act`, `Titulo`, `Fecha`, `Hora_salida`, `Hora_llegada`, `Descripcion`, `Detalles`, `Foto_src`, `Foto_title`, `Foto_alt`, `Precio`) VALUES
-('alhambra', 'Visita a la Alhambra', '2015-06-02', '10:00:00', '18:00:00', 'Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitectÃ³nicos mÃ¡s importantes de la Edad Media y mÃ¡ximo exponente del arte islÃ¡mico en Occidente.;\r\nLa visita a la Alhambra, Patrimonio de la Humanidad por la UNESCO, es fundamental si va a pasar unos dÃ­as en la ciudad.;\r\nEn esta visita se contarÃ¡ con guÃ­as turÃ­sticos oficiales que le acompaÃ±arÃ¡n recorriendo un sitio Ãºnico en el mundo.', 'Alcazaba: la zona mÃ¡s antigua del complejo con pasado militar.;\r\nPalacios NazarÃ­es: destacan los Palacios del Mexuar, de Comares y de los Leones, mÃ¡ximo exponente del arte nazarÃ­.;\r\nGeneralife: palacio de verano del sultÃ¡n, rodeado de extensos jardines.;\r\nIncluye autobÃºs de ida y vuelta.', 'images/actividades/alhambra1.jpg', 'Alhambra', 'alhambra', 45),
-('cahorros', 'Ruta por los Cahorros', '2015-06-02', '10:00:00', '14:00:00', 'Monachil es un pueblo que estÃ¡ situado a tan sÃ³lo unos 8 kilÃ³metros hacia el sureste de Granada, en la parte del centro-sur de la comarca de la Vega de Granada. Es aquÃ­ donde estÃ¡n Los Cahorros, una zona de alucinantes paisajes ideal para hacer senderismo o practicar escalada.;\r\n\r\nLa ruta de Los Cahorros discurre bordeando el rÃ­o Monachil, el cual nace en el pico Veleta (el segundo mÃ¡s alto de la Sierra Nevada y el cuarto del paÃ­s). Y este rÃ­o es el gran artÃ­fice del impresionante paisaje, altas montaÃ±as que han sido escarvadas durante siglos por sus aguas. Los viajeros van caminando entre las paredes, en ocasiones bastante estrechas, que el Monachil consiguir modelar.;', 'Incluye autobÃºs ida y vuelta.;\r\nPicnic incluido.', 'images/actividades/cahorros1.jpg', 'Cahorros', 'cahorros', 10),
-('cena-gala', 'Cena de gala', '2015-06-03', '22:00:00', '00:00:00', 'La cena de gala se harÃ¡ en el hotel NazarÃ­es.\r\n', 'Obligatorio ir de etiqueta.', 'images/actividades/cena1.jpg', 'Cena de Gala', 'cena-gala', 25),
-('sierra-nevada', 'Visita a Sierra Nevada', '2015-06-01', '08:00:00', '17:00:00', 'Sierra Nevada se encuentra en la parte central de la Cordillera PenibÃ©tica y es una de las areas montaÃ±osas mÃ¡s extentas de la penÃ­nsula.;\r\n\r\nPodrÃ¡ visitar el CAR, donde entrenan deportistas de la talla de Mireia Belmonte, campeona mundial de nataciÃ³n.;\r\n\r\nAdemÃ¡s la visita incluye una hora de alquiler de trineo, para poder sentir la experiencia de deslizarse por la nieve, y una vuelta en el Trineo Ruso y competir con sus amigos para ver quiÃ©n es el mÃ¡s rÃ¡pido.', 'Visita al Centro de Alto Rendimiento (CAR) deportivo.;1 hora de alquiler de trineos.;1 vuelta en el Trineo Ruso.;Incluye autobÃºs de ida y vuelta.;Se recomienda llevar calzado cÃ³modo.', 'images/actividades/sierra-nevada1.jpg', 'Sierra Nevada', 'sierra-nevada', 70);
+INSERT INTO `actividades` (`ID_act`, `Titulo`, `Fecha`, `Hora_salida`, `Hora_llegada`, `Descripcion`, `Detalles`, `Foto_src`, `Foto_title`, `Foto_alt`, `Precio`, `Minifoto_src`) VALUES
+('alhambra', 'Visita a la Alhambra', '2015-06-02', '10:00:00', '18:00:00', 'Asentada sobre la Colina Roja o Cerro de la Sabika, la ciudadela de la Alhambra se presenta erguida, orgullosa y eterna, como uno de los complejos arquitectÃ³nicos mÃ¡s importantes de la Edad Media y mÃ¡ximo exponente del arte islÃ¡mico en Occidente.;\r\nLa visita a la Alhambra, Patrimonio de la Humanidad por la UNESCO, es fundamental si va a pasar unos dÃ­as en la ciudad.;\r\nEn esta visita se contarÃ¡ con guÃ­as turÃ­sticos oficiales que le acompaÃ±arÃ¡n recorriendo un sitio Ãºnico en el mundo.', 'Alcazaba: la zona mÃ¡s antigua del complejo con pasado militar.;\r\nPalacios NazarÃ­es: destacan los Palacios del Mexuar, de Comares y de los Leones, mÃ¡ximo exponente del arte nazarÃ­.;\r\nGeneralife: palacio de verano del sultÃ¡n, rodeado de extensos jardines.;\r\nIncluye autobÃºs de ida y vuelta.', 'images/actividades/alhambra1.jpg', 'Alhambra', 'alhambra', 45, 'images/actividades/miniAlhambra.jpg'),
+('cahorros', 'Ruta por los Cahorros', '2015-06-02', '10:00:00', '14:00:00', 'Monachil es un pueblo que estÃ¡ situado a tan sÃ³lo unos 8 kilÃ³metros hacia el sureste de Granada, en la parte del centro-sur de la comarca de la Vega de Granada. Es aquÃ­ donde estÃ¡n Los Cahorros, una zona de alucinantes paisajes ideal para hacer senderismo o practicar escalada.;\r\n\r\nLa ruta de Los Cahorros discurre bordeando el rÃ­o Monachil, el cual nace en el pico Veleta (el segundo mÃ¡s alto de la Sierra Nevada y el cuarto del paÃ­s). Y este rÃ­o es el gran artÃ­fice del impresionante paisaje, altas montaÃ±as que han sido escarvadas durante siglos por sus aguas. Los viajeros van caminando entre las paredes, en ocasiones bastante estrechas, que el Monachil consiguir modelar.;', 'Incluye autobÃºs ida y vuelta.;\r\nPicnic incluido.', 'images/actividades/cahorros1.jpg', 'Cahorros', 'cahorros', 10, 'images/actividades/miniCahorros.jpg'),
+('cena-gala', 'Cena de gala', '2015-06-03', '22:00:00', '00:00:00', 'La cena de gala se harÃ¡ en el hotel NazarÃ­es.\r\n', 'Obligatorio ir de etiqueta.', 'images/actividades/cena1.jpg', 'Cena de Gala', 'cena-gala', 25, 'images/actividades/miniCena.jpg'),
+('sierra-nevada', 'Visita a Sierra Nevada', '2015-06-01', '08:00:00', '17:00:00', 'Sierra Nevada se encuentra en la parte central de la Cordillera PenibÃ©tica y es una de las areas montaÃ±osas mÃ¡s extentas de la penÃ­nsula.;\r\n\r\nPodrÃ¡ visitar el CAR, donde entrenan deportistas de la talla de Mireia Belmonte, campeona mundial de nataciÃ³n.;\r\n\r\nAdemÃ¡s la visita incluye una hora de alquiler de trineo, para poder sentir la experiencia de deslizarse por la nieve, y una vuelta en el Trineo Ruso y competir con sus amigos para ver quiÃ©n es el mÃ¡s rÃ¡pido.', 'Visita al Centro de Alto Rendimiento (CAR) deportivo.;1 hora de alquiler de trineos.;1 vuelta en el Trineo Ruso.;Incluye autobÃºs de ida y vuelta.;Se recomienda llevar calzado cÃ³modo.', 'images/actividades/sierra-nevada1.jpg', 'Sierra Nevada', 'sierra-nevada', 70, 'images/actividades/miniSierra.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,9 +69,13 @@ CREATE TABLE IF NOT EXISTS `apuntados_actividad` (
 --
 
 INSERT INTO `apuntados_actividad` (`email`, `ID_act`) VALUES
+('aa@aa.com', 'alhambra'),
+('aaa@a.com', 'alhambra'),
 ('admin@admin.com', 'alhambra'),
 ('pepe@congresista.com', 'alhambra'),
+('aaa@a.com', 'cahorros'),
 ('luis@profesor.com', 'cahorros'),
+('aa@aa.com', 'cena-gala'),
 ('admin@admin.com', 'cena-gala'),
 ('pepe@congresista.com', 'cena-gala');
 
@@ -117,6 +122,27 @@ INSERT INTO `cuota_actividad` (`ID_cuota`, `ID_act`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `reservas`
+--
+
+CREATE TABLE IF NOT EXISTS `reservas` (
+  `email` varchar(40) NOT NULL,
+  `hotel` varchar(45) NOT NULL,
+  `habitacion` varchar(45) NOT NULL,
+  `llegada` date NOT NULL,
+  `salida` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`email`, `hotel`, `habitacion`, `llegada`, `salida`) VALUES
+('aa@aa.com', '002', '7', '2015-06-01', '2015-06-03');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -136,14 +162,15 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`email`, `Nombre`, `Apellidos`, `Telefono`, `Contrasena`, `ID_cuota`, `Tipo`, `Centro`) VALUES
+('aa@aa.com', 'Alan', 'Turing', '625112233', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Estudiante', 0, 'UGR'),
+('aaa@a.com', 'Pedro', 'Sanchez', '625112233', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Invitado', 0, 'UGR'),
 ('aceitedesilicona@gmail.com', 'Aceite', 'Silicona', '958445544', 'bbdcec4f0a79d68c048fbfb7ba7d936b8f040e26', 'Estudiante', 0, NULL),
 ('admin@admin.com', 'MiKe', 'Sanchez', '958151515', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Invitado', 1, NULL),
 ('antonio@estudiante.com', 'Antonio', 'Jimenez', '958774477', '4c663d666680cd1a68d6c3c63327aade2545a647', 'Estudiante', 0, NULL),
 ('Juan@profesor.com', 'Juan', 'Cuesta', NULL, '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Profesor', 0, 'UCM'),
 ('luis@profesor.com', 'Luis', 'Martinez', '958145451', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Profesor', 0, NULL),
 ('pedro@congresista.com', 'Pedro', 'Perez', NULL, '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Estudiante', 0, NULL),
-('pepe@congresista.com', 'Pepe', 'Sanchez', '958665566', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Estudiante', 0, NULL),
-('QWE@R.COM', 'das', 'asd', '111222333', '356a192b7913b04c54574d18c28d46e6395428ab', 'Profesor', 0, 'q');
+('pepe@congresista.com', 'Pepe', 'Sanchez', '958665566', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Estudiante', 0, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -174,6 +201,12 @@ ALTER TABLE `cuota_actividad`
  ADD PRIMARY KEY (`ID_cuota`,`ID_act`), ADD KEY `Actividad clave externa` (`ID_act`);
 
 --
+-- Indices de la tabla `reservas`
+--
+ALTER TABLE `reservas`
+ ADD PRIMARY KEY (`email`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -196,6 +229,12 @@ ADD CONSTRAINT `Restriccion de email usuario externa` FOREIGN KEY (`email`) REFE
 ALTER TABLE `cuota_actividad`
 ADD CONSTRAINT `Actividad clave externa` FOREIGN KEY (`ID_act`) REFERENCES `actividades` (`ID_act`) ON UPDATE CASCADE,
 ADD CONSTRAINT `Cuota clave externa` FOREIGN KEY (`ID_cuota`) REFERENCES `cuotas` (`ID_cuota`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `reservas`
+--
+ALTER TABLE `reservas`
+ADD CONSTRAINT `Email FK para reservas` FOREIGN KEY (`email`) REFERENCES `usuarios` (`email`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`
