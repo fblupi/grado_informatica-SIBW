@@ -46,7 +46,7 @@
                 $habitacion=$hab;
         }
 
-        $hotel='00'.$_POST['hotel']; //Para que coincida con el codigoHotel de la API.
+        $hotel=$_POST['hotel']; //Para que coincida con el codigoHotel de la API.
 
         setReserva($hotel,$habitacion,$llegada,$salida);
 
